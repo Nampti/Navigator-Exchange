@@ -1,8 +1,11 @@
-import logo from "./logo.svg";
+
 import "./App.css";
 import Banner from "./components/Banner";
 import Info from "./components/Info";
-
+import Vault from "./components/Vault";
+import Summary from "./components/Summary";
+import Ecosystem from "./components/Ecosystem";
+import Contact from "./components/Contact";
 function App() {
   return (
     <>
@@ -122,6 +125,10 @@ function App() {
           <div className="Wrapper">
             <Banner />
             <Info />
+            <Vault/>
+            <Summary />
+            <Ecosystem />
+            <Contact/>
           </div>
         </div>
       </div>

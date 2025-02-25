@@ -66,8 +66,8 @@ const Banner = () => {
               </div>
             </div>
             <div className="box-title">
-              <div className="title">Decentralized Liquidity Marketplace</div>
-              <div className="desc">
+              <div className="banner-title">Decentralized Liquidity Marketplace</div>
+              <div className="banner-desc">
                 Effortless trading, continuous liquidity. Across Crypto, Forex,
                 and beyond.
               </div>

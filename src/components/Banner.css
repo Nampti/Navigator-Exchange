@@ -98,15 +98,9 @@
   right: 17px;
 }
 .box-title {
-  display: flex;
-  flex-direction: column;
-  -webkit-box-align: center;
-  align-items: center;
-  gap: 16px;
-  align-self: stretch;
   width: 100%;
 }
-.title {
+.banner-title {
   color: var(--Primary, #90fb75);
   text-align: center;
   font-size: 36px;
@@ -119,7 +113,7 @@
   transition: transform 0.3s ease;
 }
 
-.desc {
+.banner-desc {
   color: rgb(255, 255, 255);
   text-align: center;
   font-size: 16px;
@@ -214,6 +208,7 @@
   -webkit-box-align: center;
   align-items: center;
   gap: 4px;
+  font-size: 14px;
 }
 .wall {
   width: 1px;
