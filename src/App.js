@@ -5,11 +5,12 @@ import Vault from "./components/Vault";
 import Summary from "./components/Summary";
 import Ecosystem from "./components/Ecosystem";
 import Contact from "./components/Contact";
+
 function App() {
   return (
     <>
       <div className="App">
-        <video className="videoTag" autoplay="" playsinline="" loop="">
+        <video className="videoTag" autoPlay playsInline loop muted>
           <source
             src="https://cdn.mummy.finance/bg_videoMMY.mp4"
             type="video/mp4"
@@ -27,7 +28,7 @@ function App() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g clip-path="url(#clip0_17935_1054)">
+                    <g clipPath="url(#clip0_17935_1054)">
                       <path
                         d="M53.0821 21.2019L45.6092 10.5576H42.8433V25.0817H45.3686V14.4452L52.8423 25.0817H55.6082V10.5576H53.0821V21.2019Z"
                         fill="#90FB75"
@@ -88,7 +89,7 @@ function App() {
                   <div className="App-header-links-item">
                     <a
                       href="https://app.navigator.exchange/#/trade"
-                      class="link-underline"
+                      className="link-underline"
                       target="_self"
                       rel="noopener noreferrer"
                     >
@@ -98,7 +99,7 @@ function App() {
                   <div className="App-header-links-item">
                     <a
                       href="https://docs.navigator.exchange/"
-                      class="link-underline"
+                      className="link-underline"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -111,7 +112,7 @@ function App() {
                 <div className="App-header-user">
                   <div className="App-header-trade-link">
                     <a
-                      class="default-btn"
+                      className="default-btn"
                       href="https://app.navigator.exchange/#/trade"
                     >
                       <span>Launch App</span>
@@ -141,7 +142,7 @@ function App() {
           <span className="details">
             <a
               href="https://app.navigator.exchange/#/analytics/contest"
-              class="link-underline"
+              className="link-underline"
               target="_blank"
               rel="noopener noreferrer"
             >
