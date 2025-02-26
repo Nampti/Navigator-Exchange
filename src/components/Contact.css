@@ -113,6 +113,9 @@
   border-radius: 1000px;
   background: var(--Primary, #90fb75);
 }
+.item-social:hover {
+  background: var(--Primary, #79ee5c);
+}
 .box-menu {
   display: flex;
   -webkit-box-align: center;
