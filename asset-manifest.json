@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Navigator-Exchange/static/css/main.806a7b9a.css",
-    "main.js": "/Navigator-Exchange/static/js/main.92956650.js",
+    "main.css": "/Navigator-Exchange/static/css/main.03ca11c6.css",
+    "main.js": "/Navigator-Exchange/static/js/main.50221445.js",
     "static/js/453.812cbb1d.chunk.js": "/Navigator-Exchange/static/js/453.812cbb1d.chunk.js",
     "static/media/ic_melania_40.svg": "/Navigator-Exchange/static/media/ic_melania_40.ca5a57f8541807653695.ca5a57f85418076536958e349e417804.svg",
     "static/media/ic_aixbt_40.svg": "/Navigator-Exchange/static/media/ic_aixbt_40.3fcc611d703a308f762c.3fcc611d703a308f762cb75cc0dcd114.svg",
@@ -45,12 +45,12 @@
     "static/media/ic_bnb_40.svg": "/Navigator-Exchange/static/media/ic_bnb_40.60a43ade662a49eb0a6f.60a43ade662a49eb0a6fcc7550541da4.svg",
     "static/media/ic_hype_40.svg": "/Navigator-Exchange/static/media/ic_hype_40.94f3113eb4eb5b7a412f.94f3113eb4eb5b7a412ff1b0c73bb318.svg",
     "static/media/ic_link_40.svg": "/Navigator-Exchange/static/media/ic_link_40.1eae34cfaa873fc147be.1eae34cfaa873fc147be852d08f47098.svg",
-    "main.806a7b9a.css.map": "/Navigator-Exchange/static/css/main.806a7b9a.css.map",
-    "main.92956650.js.map": "/Navigator-Exchange/static/js/main.92956650.js.map",
+    "main.03ca11c6.css.map": "/Navigator-Exchange/static/css/main.03ca11c6.css.map",
+    "main.50221445.js.map": "/Navigator-Exchange/static/js/main.50221445.js.map",
     "453.812cbb1d.chunk.js.map": "/Navigator-Exchange/static/js/453.812cbb1d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.806a7b9a.css",
-    "static/js/main.92956650.js"
+    "static/css/main.03ca11c6.css",
+    "static/js/main.50221445.js"
   ]
 }
