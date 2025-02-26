@@ -226,6 +226,9 @@
 .reverse {
   animation-direction: reverse !important;
 }
+.quick {
+  animation: marquee 22.666666666666668s linear 0s infinite;
+}
 
 .rfm-initial-child-container {
   flex: 0 0 auto;

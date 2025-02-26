@@ -1,4 +1,3 @@
-
 import "./App.css";
 import Banner from "./components/Banner";
 import Info from "./components/Info";
@@ -10,7 +9,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <video class="videoTag" autoplay="" loop="" playsinline="">
+        <video className="videoTag" autoplay="" playsinline="" loop="">
           <source
             src="https://cdn.mummy.finance/bg_videoMMY.mp4"
             type="video/mp4"
@@ -125,10 +124,10 @@ function App() {
           <div className="Wrapper">
             <Banner />
             <Info />
-            <Vault/>
+            <Vault />
             <Summary />
             <Ecosystem />
-            <Contact/>
+            <Contact />
           </div>
         </div>
       </div>

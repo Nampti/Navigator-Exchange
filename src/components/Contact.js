@@ -90,7 +90,7 @@ const Contact = () => {
             </div>
             <div className="right-contact">
               <div className="rfm-marquee-container">
-                <div className="rfm-marquee">
+                <div className="rfm-marquee quick">
                   <div className="rfm-initial-child-container">
                     <div
                       className="rfm-child"
@@ -208,7 +208,7 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
-                <div className="rfm-marquee">
+                <div className="rfm-marquee quick">
                   <div className="rfm-child" style={{ "--transform": "none" }}>
                     <a
                       href="https://app.navigator.exchange/#/trade?symbol=ARB/USD"
@@ -308,7 +308,7 @@ const Contact = () => {
                 </div>
               </div>
               <div className="rfm-marquee-container">
-                <div className="rfm-marquee reverse">
+                <div className="rfm-marquee reverse quick">
                   <div className="rfm-initial-child-container">
                     <div
                       className="rfm-child"
@@ -426,7 +426,7 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
-                <div className="rfm-marquee reverse">
+                <div className="rfm-marquee reverse quick">
                   <div className="rfm-child" style={{ "--transform": "none" }}>
                     <a
                       href="https://app.navigator.exchange/#/trade?symbol=ARB/USD"
@@ -526,7 +526,7 @@ const Contact = () => {
                 </div>
               </div>
               <div className="rfm-marquee-container">
-                <div className="rfm-marquee">
+                <div className="rfm-marquee quick">
                   <div className="rfm-initial-child-container">
                     <div
                       className="rfm-child"
@@ -644,7 +644,7 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
-                <div className="rfm-marquee">
+                <div className="rfm-marquee quick">
                   <div className="rfm-child" style={{ "--transform": "none" }}>
                     <a
                       href="https://app.navigator.exchange/#/trade?symbol=ARB/USD"
