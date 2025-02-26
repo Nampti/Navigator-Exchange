@@ -8,6 +8,7 @@ import Vault6 from "../assets/icon/vault6.svg";
 import Vault7 from "../assets/icon/vault7.svg";
 import Vault8 from "../assets/icon/vault8.svg";
 import "./Vault.css";
+import { formatFloatNumber } from "../utils/format";
 
 const Vault = () => {
   const titleRef = useRef(null);
@@ -112,11 +113,11 @@ const Vault = () => {
                 <div className="boxes">
                   <div className="box-value-vault">
                     <div className="sub-title">APY</div>
-                    79.56%
+                    {formatFloatNumber(78.65555)}%
                   </div>
                   <div className="box-value-vault">
                     <div className="sub-title">Daily</div>
-                    0.17%
+                    {formatFloatNumber(0.7)}%
                   </div>
                 </div>
               </div>
@@ -142,11 +143,11 @@ const Vault = () => {
                 <div className="boxes">
                   <div className="box-value-vault">
                     <div className="sub-title">APY</div>
-                    341.04%
+                    {formatFloatNumber(341.132132)}%
                   </div>
                   <div className="box-value-vault">
                     <div className="sub-title">Daily</div>
-                    0.54%
+                    {formatFloatNumber(0.5212321)}%
                   </div>
                 </div>
               </div>
@@ -167,7 +168,7 @@ const Vault = () => {
               <div>
                 <img className="img-coin" src={Vault7} alt="vault7"></img>
               </div>
-              <div className="wrap-value">
+              <div className="wrap-value-vault">
                 <div className="name-coin">NAVI</div>
                 <div className="boxes">
                   <div className="box-value-vault">
@@ -193,7 +194,7 @@ const Vault = () => {
               <div>
                 <img className="img-coin" src={Vault8} alt="vault8"></img>
               </div>
-              <div className="wrap-value">
+              <div className="wrap-value-vault">
                 <div className="name-coin">NAVI</div>
                 <div className="boxes">
                   <div className="box-value-vault">

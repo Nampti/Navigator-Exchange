@@ -5,6 +5,7 @@ import Vault from "./components/Vault";
 import Summary from "./components/Summary";
 import Ecosystem from "./components/Ecosystem";
 import Contact from "./components/Contact";
+import MenuLogo from "../src/assets/icon/menu-logo.png";
 
 function App() {
   return (
@@ -117,6 +118,44 @@ function App() {
                     >
                       <span>Launch App</span>
                     </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="App-header-responsive">
+              <div className="App-header-link-container App-header-top">
+                <div className="App-header-container-left">
+                  <div className="App-header-menu-icon-block">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      className="App-header-menu-icon"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g>
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div className="App-header-link-main clickable">
+                    <img src={MenuLogo} className="small-logo" alt=""></img>
+                  </div>
+                </div>
+                <div className="App-header-container-right">
+                  <div className="App-header-user">
+                    <div className="App-header-trade-link homepage-header">
+                      <a
+                        class="default-btn"
+                        href="https://app.navigator.exchange/#/trade"
+                      >
+                        <span>Launch App</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

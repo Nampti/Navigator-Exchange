@@ -13,6 +13,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: 140%;
+  margin-bottom: 16px;
 }
 .desc-summary {
   color: var(--Text-Text_Secondary, #828899);

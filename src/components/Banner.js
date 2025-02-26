@@ -28,7 +28,8 @@ import Icon25 from "../assets/icon/ic_aud_40.d4190362c7a1d96161e5.svg";
 import Icon26 from "../assets/icon/ic_nzd_40.7fea2bb4dfed2a0964f0.svg";
 import Audi from "../assets/icon/audi.png";
 import Audi1 from "../assets/icon/audi1.png";
-
+import { formatNumber } from "../utils/format";
+import { CountUp } from "use-count-up";
 import "./Banner.css";
 
 const Banner = () => {
@@ -917,7 +918,13 @@ const Banner = () => {
             </div>
             <div className="overview-info">
               <div className="overview-value">
-                <span>$169,664,925</span>
+                $
+                <CountUp
+                  isCounting
+                  end={181277164}
+                  duration={1}
+                  formatter={formatNumber}
+                />
               </div>
               <div className="overview-title">Total Volume</div>
             </div>
@@ -962,7 +969,13 @@ const Banner = () => {
             </div>
             <div className="overview-info">
               <div className="overview-value">
-                <span>$0</span>
+                $
+                <CountUp
+                  isCounting
+                  end={1812771}
+                  duration={1}
+                  formatter={formatNumber}
+                />
               </div>
               <div className="overview-title">Total Value Locked</div>
             </div>
@@ -993,7 +1006,13 @@ const Banner = () => {
             </div>
             <div className="overview-info">
               <div className="overview-value">
-                <span>$0</span>
+                $
+                <CountUp
+                  isCounting
+                  end={181277164}
+                  duration={1}
+                  formatter={formatNumber}
+                />
               </div>
               <div className="overview-title">Total Fees</div>
             </div>
@@ -1018,7 +1037,13 @@ const Banner = () => {
             </div>
             <div className="overview-info">
               <div className="overview-value">
-                <span>$0</span>
+                $
+                <CountUp
+                  isCounting
+                  end={177164}
+                  duration={1}
+                  formatter={formatNumber}
+                />
               </div>
               <div className="overview-title">Open Interest</div>
             </div>
@@ -1043,7 +1068,12 @@ const Banner = () => {
             </div>
             <div className="overview-info">
               <div className="overview-value">
-                <span>3,842</span>
+                <CountUp
+                  isCounting
+                  end={3823}
+                  duration={1}
+                  formatter={formatNumber}
+                />
               </div>
               <div className="overview-title">c</div>
             </div>
