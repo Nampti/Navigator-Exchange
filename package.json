@@ -2,7 +2,7 @@
   "name": "Navigator Exchange",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://Nampti.github.io/Navigator-Exchange",
+  "homepage": "https://nampti.github.io/Navigator-Exchange",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
