@@ -4,7 +4,7 @@ import Info2 from "../assets/icon/info1.png";
 import Info3 from "../assets/icon/info2.png";
 import Info4 from "../assets/icon/info3.png";
 import Info5 from "../assets/icon/info4.png";
-import "./Info.css"
+import "./Info.css";
 const Info = () => {
   return (
     <div className="info">
@@ -24,18 +24,20 @@ const Info = () => {
               <img className="img-protocol" src={Info1}></img>
             </div>
             <div className="line-left"></div>
-
           </div>
           <div>
             <div className="item-protocol protocol-left">
               <div className="box-title">
-                <div className="title-protocol">High-Leverage Perpetuals, All Assets</div>
+                <div className="title-protocol">
+                  High-Leverage Perpetuals, All Assets
+                </div>
                 <div>
-                Navigator lets you trade crypto, forex, and commodities. Take advantage of up to 100x leverage, to maximize your trading opportunities.
+                  Navigator lets you trade crypto, forex, and commodities. Take
+                  advantage of up to 100x leverage, to maximize your trading
+                  opportunities.
                 </div>
               </div>
               <img className="img-protocol" src={Info2}></img>
-
             </div>
           </div>
         </div>
@@ -47,11 +49,15 @@ const Info = () => {
         <div>
           <div>
             <div className="item-protocol">
-            <img className="img-protocol" src={Info4}></img>
+              <img className="img-protocol" src={Info4}></img>
               <div className="box-title title-right">
-                <div className="title-protocol">Double Trading Liquidity Pools</div>
+                <div className="title-protocol">
+                  Double Trading Liquidity Pools
+                </div>
                 <div className="desc-right">
-                  Trading orders on Navigator are executed across two specialized liquidity pools: one for blue-chip assets and another exclusively for stablecoins.
+                  Trading orders on Navigator are executed across two
+                  specialized liquidity pools: one for blue-chip assets and
+                  another exclusively for stablecoins.
                 </div>
               </div>
             </div>
@@ -61,9 +67,13 @@ const Info = () => {
             <div className="item-protocol">
               <img className="img-protocol" src={Info5}></img>
               <div className="box-title title-right">
-                <div className="title-protocol">SAFU, Transparency and Secured</div>
+                <div className="title-protocol">
+                  SAFU, Transparency and Secured
+                </div>
                 <div className="desc-right">
-                Navigator uses Pyth to protect against fraudulent trading and manipulation. Your funds are self-custodied. All smart contracts are open-source, transparent and audited.
+                  Navigator uses Pyth to protect against fraudulent trading and
+                  manipulation. Your funds are self-custodied. All smart
+                  contracts are open-source, transparent and audited.
                 </div>
               </div>
             </div>

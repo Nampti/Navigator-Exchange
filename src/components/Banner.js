@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useRef } from "react";
 import Icon1 from "../assets/icon/ic_btc_40.1560513c6c41f919ca40.svg";
 import Icon2 from "../assets/icon/ic_eth_40.5e255508ace6905c4815.svg";
 import Icon3 from "../assets/icon/ic_link_40.1eae34cfaa873fc147be.svg";
@@ -27,23 +28,47 @@ import Icon25 from "../assets/icon/ic_aud_40.d4190362c7a1d96161e5.svg";
 import Icon26 from "../assets/icon/ic_nzd_40.7fea2bb4dfed2a0964f0.svg";
 import Audi from "../assets/icon/audi.png";
 import Audi1 from "../assets/icon/audi1.png";
+
 import "./Banner.css";
-import { useEffect } from "react";
 
 const Banner = () => {
-  useEffect(() => {
-    const handleScroll = () => {
-      const banner = document.querySelector(".banner");
-      if (window.scrollY > 0) {
-        banner.classList.add("scrolled");
-      } else {
-        banner.classList.remove("scrolled");
-      }
-    };
+  const titleRef = useRef(null);
+  const descRef = useRef(null);
+  const buttonRef = useRef(null);
 
-    window.addEventListener("scroll", handleScroll);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            entry.target.classList.remove("hidden");
+          } else {
+            entry.target.classList.add("hidden");
+            entry.target.classList.remove("visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (titleRef.current) {
+      observer.observe(titleRef.current);
+    }
+    if (descRef.current) {
+      observer.observe(descRef.current);
+    }
+    if (buttonRef.current) {
+      observer.observe(buttonRef.current);
+    }
+
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      if (titleRef.current) {
+        observer.unobserve(titleRef.current);
+      }
+      if (descRef.current) {
+        observer.unobserve(descRef.current);
+      }
     };
   }, []);
   return (
@@ -66,8 +91,10 @@ const Banner = () => {
               </div>
             </div>
             <div className="box-title">
-              <div className="banner-title">Decentralized Liquidity Marketplace</div>
-              <div className="banner-desc">
+              <div className={`banner-title`} ref={titleRef}>
+                Decentralized Liquidity Marketplace
+              </div>
+              <div className={`banner-desc`} ref={descRef}>
                 Effortless trading, continuous liquidity. Across Crypto, Forex,
                 and beyond.
               </div>
@@ -75,6 +102,7 @@ const Banner = () => {
             <a
               href="https://app.navigator.exchange/#/trade"
               className="default-btn"
+              ref={buttonRef}
               style={{ opacity: 1, transform: "none", willChange: "transform" }}
             >
               Start Trading
@@ -83,7 +111,10 @@ const Banner = () => {
           <div className="rfm-marquee-container">
             <div className="rfm-marquee">
               <div className="rfm-initial-child-container">
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=BTC/USD"
                     className="link-underline wrap-coin"
@@ -95,7 +126,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=ETH/USD"
                     className="link-underline wrap-coin"
@@ -107,7 +141,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=LINK/USD"
                     className="link-underline wrap-coin"
@@ -119,7 +156,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=XRP/USD"
                     className="link-underline wrap-coin"
@@ -131,7 +171,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=BNB/USD"
                     className="link-underline wrap-coin"
@@ -143,7 +186,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=OP/USD"
                     className="link-underline wrap-coin"
@@ -155,7 +201,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=SOL/USD"
                     className="link-underline wrap-coin"
@@ -167,7 +216,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=ARB/USD"
                     className="link-underline wrap-coin"
@@ -179,7 +231,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=ORDI/USD"
                     className="link-underline wrap-coin"
@@ -191,7 +246,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=SUI/USD"
                     className="link-underline wrap-coin"
@@ -203,7 +261,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=PEPE/USD"
                     className="link-underline wrap-coin"
@@ -215,7 +276,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=S/USD"
                     className="link-underline wrap-coin"
@@ -227,7 +291,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=TRUMP/USD"
                     className="link-underline wrap-coin"
@@ -239,7 +306,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=MELANIA/USD"
                     className="link-underline wrap-coin"
@@ -251,7 +321,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=AIXBT/USD"
                     className="link-underline wrap-coin"
@@ -263,7 +336,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=ANON/USD"
                     className="link-underline wrap-coin"
@@ -275,7 +351,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=BERA/USD"
                     className="link-underline wrap-coin"
@@ -287,7 +366,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=LTC/USD"
                     className="link-underline wrap-coin"
@@ -299,7 +381,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=ADA/USD"
                     className="link-underline wrap-coin"
@@ -311,7 +396,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=HYPE/USD"
                     className="link-underline wrap-coin"
@@ -323,7 +411,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=EUR/USD"
                     className="link-underline wrap-coin"
@@ -335,7 +426,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=XAU/USD"
                     className="link-underline wrap-coin"
@@ -347,7 +441,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=GBP/USD"
                     className="link-underline wrap-coin"
@@ -359,7 +456,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=XAG/USD"
                     className="link-underline wrap-coin"
@@ -371,7 +471,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=AUD/USD"
                     className="link-underline wrap-coin"
@@ -383,7 +486,10 @@ const Banner = () => {
                     </div>
                   </a>
                 </div>
-                <div className="rfm-child" style={{ "--transform": "none" }}>
+                <div
+                  className="rfm-child-banner"
+                  style={{ "--transform": "none" }}
+                >
                   <a
                     href="https://app.navigator.exchange/#/trade?symbol=NZD/USD"
                     className="link-underline wrap-coin"

@@ -109,8 +109,6 @@
   line-height: 140%;
   opacity: 1;
   transform: none;
-  will-change: transform;
-  transition: transform 0.3s ease;
 }
 
 .banner-desc {
@@ -122,15 +120,84 @@
   line-height: 140%;
   opacity: 1;
   transform: none;
-  will-change: transform;
-  transition: transform 0.3s ease;
 }
 
-/* .scrolled .title,
-.scrolled .desc {
-  transform: translateY(-50px);
+@keyframes fadeInDown-title {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeOutUp-title {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+@keyframes fadeInDown-desc {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeOutUp-desc {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.banner-title {
   opacity: 0;
-} */
+  transform: translateY(-50px);
+}
+.banner-desc,
+.default-btn {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.banner-title.visible {
+  animation: fadeInDown-title 0.3s ease-out forwards;
+}
+.banner-desc.visible,
+.default-btn.visible {
+  animation: fadeInDown-desc 0.3s ease-out forwards;
+}
+
+.banner-title.hidden {
+  animation: fadeOutUp-title 0.3s ease-out forwards;
+}
+.banner-desc.hidden,
+.default-btn.hidden {
+  animation: fadeOutUp-desc 0.3s ease-out forwards;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 .rfm-marquee-container {
   background: transparent;
   --pause-on-hover: running;
@@ -144,6 +211,7 @@
   width: 100%;
   transform: none;
 }
+
 .rfm-marquee {
   --play: running;
   --direction: normal;
@@ -157,11 +225,12 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  animation: scroll 66.56s linear 0s infinite;
+  animation: marquee 66.56s linear 0s infinite;
   animation-play-state: running;
   animation-delay: 0s;
   animation-direction: normal;
 }
+
 .rfm-initial-child-container {
   flex: 0 0 auto;
   display: flex;
@@ -169,7 +238,7 @@
   flex-direction: row;
   align-items: center;
 }
-.rfm-child {
+.rfm-child-banner {
   transform: none;
 
   a {
@@ -178,6 +247,9 @@
     height: 100%;
     cursor: pointer;
   }
+}
+.rfm-child-banner:hover {
+  animation-play-state: paused;
 }
 .coin-img {
   width: 80px;
