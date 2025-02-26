@@ -1,50 +1,111 @@
-import React from 'react';
+import React from "react";
+import { useEffect, useRef } from "react";
 import "./Summary.css";
-import summary from "../assets/icon/summary.svg"
+import summary from "../assets/icon/summary.svg";
 const Summary = () => {
-    return (
-        <div className="summary">
-
-        <div className="container summary-container">
-            <div className="box-title">
-                <div className="title">
-                    Available on your preferred network
-                </div>
-                <div className="desc">
-                    Navigator is currently live on Sonic Mainnet.
-                </div>
-            </div>
-            <div className="box-content">
-                <div className="box-item">
-                    <div className="box-info">
-                        <img src={summary} className="img-box"></img>
-                        <div>Sonic</div>
-
-                    </div>
-                    <div className="wall"></div>
-                    <div className="wrap-value">
-                        <div className="box-value">
-                            <div className="title-value">Total Volume</div>
-                            <div className="price">
-                                <span>$178,517,143</span>
-                            </div>
-                        </div>
-                        <div className="box-value">
-                            <div className="title-value">Total Volume</div>
-                            <div className="price">
-                                <span>$178,517,143</span>
-                            </div>
-                        </div>
-                        <div className="box-value">
-                            <div class="title-value">Total Fees</div>
-                            <div class="price"><span>$341,771</span></div>
-                        </div>
-                    </div>
-                    <a href="https://app.navigator.exchange/#/trade" class="default-btn btn">Launch App</a>
-                </div>
-            </div>
-        </div>
-        </div>
+  const titleRef = useRef(null);
+  const descRef = useRef(null);
+  const containerRef = useRef(null);
+  const itemRefs = useRef([]);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            entry.target.classList.remove("hidden");
+          } else {
+            entry.target.classList.add("hidden");
+            entry.target.classList.remove("visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
     );
-}
+
+    if (titleRef.current) {
+      observer.observe(titleRef.current);
+    }
+    if (descRef.current) {
+      observer.observe(descRef.current);
+    }
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+    itemRefs.current.forEach((ref) => {
+      if (ref) {
+        observer.observe(ref);
+      }
+    });
+
+    return () => {
+      if (titleRef.current) {
+        observer.unobserve(titleRef.current);
+      }
+      if (descRef.current) {
+        observer.unobserve(descRef.current);
+      }
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+      itemRefs.current.forEach((ref) => {
+        if (ref) {
+          observer.unobserve(ref);
+        }
+      });
+    };
+  }, []);
+  return (
+    <div className="summary">
+      <div className="container summary-container">
+        <div className="box-title-summary">
+          <div className="title-summary" ref={titleRef}>
+            Available on your preferred network
+          </div>
+          <div className="desc-summary" ref={descRef}>
+            Navigator is currently live on Sonic Mainnet.
+          </div>
+        </div>
+        <div className="box-content-summary" ref={containerRef}>
+          <div
+            className="box-item-summary"
+            ref={(el) => (itemRefs.current[0] = el)}
+          >
+            <div className="box-info-summary">
+              <img src={summary} className="img-box"></img>
+              <div>Sonic</div>
+            </div>
+            <div className="wall-summary"></div>
+            <div className="wrap-value-summary">
+              <div className="box-value-summary">
+                <div className="title-value-summary">Total Volume</div>
+                <div className="price-summary">
+                  <span>$178,517,143</span>
+                </div>
+              </div>
+              <div className="box-value-summary">
+                <div className="title-value-summary">Total Volume</div>
+                <div className="price-summary">
+                  <span>$178,517,143</span>
+                </div>
+              </div>
+              <div className="box-value-summary">
+                <div class="title-value-summary">Total Fees</div>
+                <div class="price-summary">
+                  <span>$341,771</span>
+                </div>
+              </div>
+            </div>
+            <a
+              href="https://app.navigator.exchange/#/trade"
+              class="default-btn btn"
+            >
+              Launch App
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 export default Summary;

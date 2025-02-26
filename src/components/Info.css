@@ -1,82 +1,145 @@
-.info {
-
-   .title {
-    text-align: center;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 140%;
-    margin-bottom: 24px;
-    color: #fff;
-   }
-.item-protocol 
-{
-    display: flex;
-    padding: 48px 0px;
-    -webkit-box-align: center;
-    align-items: center;
-    gap: 24px;
-    flex: 1 0 0px;
-    align-self: stretch;
+.info-title {
+  text-align: center;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  margin-bottom: 24px;
+  color: #fff;
 }
-.box-title {
-    display: flex;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 16px;
-    flex: 1 0 0px;
-    color: rgb(255, 255, 255);
-    text-align: right;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 140%;
+.item-protocol {
+  display: flex;
+  padding: 48px 0px;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 24px;
+  flex: 1 0 0px;
+  align-self: stretch;
+}
+.box-title-info {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 16px;
+  flex: 1 0 0px;
+  color: rgb(255, 255, 255);
+  text-align: right;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
 }
 .title-protocol {
-    color: var(--Primary, #90fb75);
-    text-align: center;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 140%;
+  color: var(--Primary, #90fb75);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
 }
 .line-left {
-    height: 2px;
-    align-self: stretch;
-    background: linear-gradient(270deg, rgb(144, 251, 117) 0%, rgba(85, 149, 69, 0) 100%);
+  height: 2px;
+  align-self: stretch;
+  background: linear-gradient(
+    270deg,
+    rgb(144, 251, 117) 0%,
+    rgba(85, 149, 69, 0) 100%
+  );
 }
 .mid-protocol {
-    display: flex;
-    flex-direction: column;
-    -webkit-box-align: center;
-    align-items: center;
-    align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  align-self: stretch;
 }
 .line-top {
-    width: 2px;
-    flex: 1 0 0px;
-    background: linear-gradient(rgba(85, 149, 69, 0) 0%, rgb(144, 251, 117) 100%);
+  width: 2px;
+  flex: 1 0 0px;
+  background: linear-gradient(rgba(85, 149, 69, 0) 0%, rgb(144, 251, 117) 100%);
 }
 .mid-protocol > :not(:first-child) {
-    margin-top: -2px;
+  margin-top: -2px;
 }
 .line-bottom {
-    width: 2px;
-    flex: 1 0 0px;
-    background: linear-gradient(rgb(144, 251, 117) 0%, rgba(85, 149, 69, 0) 100%);
+  width: 2px;
+  flex: 1 0 0px;
+  background: linear-gradient(rgb(144, 251, 117) 0%, rgba(85, 149, 69, 0) 100%);
 }
 .title-right {
-    align-items: flex-start;
+  align-items: flex-start;
 }
-.desc-right
-{
-    text-align: left;
+.desc-right {
+  text-align: left;
 }
 .line-right {
-    height: 2px;
-    align-self: stretch;
-    background: linear-gradient(270deg, rgba(85, 149, 69, 0) 0%, rgb(144, 251, 117) 100%);
+  height: 2px;
+  align-self: stretch;
+  background: linear-gradient(
+    270deg,
+    rgba(85, 149, 69, 0) 0%,
+    rgb(144, 251, 117) 100%
+  );
 }
+@keyframes fadeInDown-info-title {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeOutUp-info-title {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+@keyframes fadeInDown-info-item {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeOutUp-info-item {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+.info-title {
+  opacity: 0;
+  transform: translateY(40px);
+}
+.item-protocol {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.info-title.visible {
+  animation: fadeInDown-info-title 0.6s ease-out forwards;
+}
+.item-protocol.visible {
+  animation: fadeInDown-info-item 0.6s ease-out forwards;
+}
+.info-title.hidden {
+  animation: fadeOutUp-info-title 0.6s ease-out forwards;
+}
+.item-protocol.hidden {
+  animation: fadeOutUp-info-item 0.6s ease-out forwards;
 }

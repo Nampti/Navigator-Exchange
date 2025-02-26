@@ -35,6 +35,10 @@ const Banner = () => {
   const titleRef = useRef(null);
   const descRef = useRef(null);
   const buttonRef = useRef(null);
+  const audiLeftRef = useRef(null);
+  const audiRightRef = useRef(null);
+  const wrapOverviewContainerRef = useRef(null);
+  const itemOverviewRefs = useRef([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -61,6 +65,20 @@ const Banner = () => {
     if (buttonRef.current) {
       observer.observe(buttonRef.current);
     }
+    if (audiLeftRef.current) {
+      observer.observe(audiLeftRef.current);
+    }
+    if (audiRightRef.current) {
+      observer.observe(audiRightRef.current);
+    }
+    if (wrapOverviewContainerRef.current) {
+      observer.observe(wrapOverviewContainerRef.current);
+    }
+    itemOverviewRefs.current.forEach((ref) => {
+      if (ref) {
+        observer.observe(ref);
+      }
+    });
 
     return () => {
       if (titleRef.current) {
@@ -69,6 +87,23 @@ const Banner = () => {
       if (descRef.current) {
         observer.unobserve(descRef.current);
       }
+      if (buttonRef.current) {
+        observer.unobserve(buttonRef.current);
+      }
+      if (audiLeftRef.current) {
+        observer.unobserve(audiLeftRef.current);
+      }
+      if (audiRightRef.current) {
+        observer.unobserve(audiRightRef.current);
+      }
+      if (wrapOverviewContainerRef.current) {
+        observer.unobserve(wrapOverviewContainerRef.current);
+      }
+      itemOverviewRefs.current.forEach((ref) => {
+        if (ref) {
+          observer.unobserve(ref);
+        }
+      });
     };
   }, []);
   return (
@@ -101,7 +136,7 @@ const Banner = () => {
             </div>
             <a
               href="https://app.navigator.exchange/#/trade"
-              className="default-btn"
+              className="default-btn banner-btn"
               ref={buttonRef}
               style={{ opacity: 1, transform: "none", willChange: "transform" }}
             >
@@ -820,7 +855,7 @@ const Banner = () => {
           </div>
         </div>
         <div className="audited container">
-          <div className="audi-item">
+          <div className="audi-item left" ref={audiLeftRef}>
             <div className="audi-text">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -845,15 +880,18 @@ const Banner = () => {
             </a>
           </div>
           <div className="wall"></div>
-          <div className="audi-item">
+          <div className="audi-item right" ref={audiRightRef}>
             <div className="audi-text">Powered by</div>
             <a href="https://pyth.network/" target="_blank" rel="noreferrer">
               <img src={Audi1} alt="" />
             </a>
           </div>
         </div>
-        <div className="wrap-overview-container">
-          <div className="item-overview">
+        <div className="wrap-overview-container" ref={wrapOverviewContainerRef}>
+          <div
+            className="item-overview"
+            ref={(el) => (itemOverviewRefs.current[0] = el)}
+          >
             <div className="overview-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -884,7 +922,10 @@ const Banner = () => {
               <div className="overview-title">Total Volume</div>
             </div>
           </div>
-          <div className="item-overview">
+          <div
+            className="item-overview"
+            ref={(el) => (itemOverviewRefs.current[1] = el)}
+          >
             <div className="overview-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -926,7 +967,10 @@ const Banner = () => {
               <div className="overview-title">Total Value Locked</div>
             </div>
           </div>
-          <div className="item-overview">
+          <div
+            className="item-overview"
+            ref={(el) => (itemOverviewRefs.current[2] = el)}
+          >
             <div className="overview-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -954,7 +998,10 @@ const Banner = () => {
               <div className="overview-title">Total Fees</div>
             </div>
           </div>
-          <div className="item-overview">
+          <div
+            className="item-overview"
+            ref={(el) => (itemOverviewRefs.current[3] = el)}
+          >
             <div className="overview-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -976,7 +1023,10 @@ const Banner = () => {
               <div className="overview-title">Open Interest</div>
             </div>
           </div>
-          <div className="item-overview">
+          <div
+            className="item-overview"
+            ref={(el) => (itemOverviewRefs.current[4] = el)}
+          >
             <div className="overview-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
