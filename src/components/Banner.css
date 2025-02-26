@@ -200,10 +200,6 @@
 }
 .rfm-marquee-container {
   background: transparent;
-  --pause-on-hover: running;
-  --pause-on-click: running;
-  --width: 100%;
-  --transform: none;
   overflow-x: hidden;
   display: flex;
   flex-direction: row;
@@ -213,12 +209,6 @@
 }
 
 .rfm-marquee {
-  --play: running;
-  --direction: normal;
-  --duration: 66.56s;
-  --delay: 0s;
-  --iteration-count: infinite;
-  --min-width: auto;
   flex: 0 0 auto;
   min-width: auto;
   z-index: 1;
@@ -229,6 +219,9 @@
   animation-play-state: running;
   animation-delay: 0s;
   animation-direction: normal;
+}
+.rfm-marquee:hover {
+  animation-play-state: paused;
 }
 .reverse {
   animation-direction: reverse !important;
@@ -251,9 +244,7 @@
     cursor: pointer;
   }
 }
-.rfm-child-banner:hover {
-  animation-play-state: paused;
-}
+
 .coin-img {
   width: 80px;
   height: 80px;
