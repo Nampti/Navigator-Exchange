@@ -272,3 +272,14 @@
 .box-item-eco.hidden {
   animation: fadeOutUp-eco-item 0.6s ease-out forwards;
 }
+@media screen and (max-width: 768px) {
+  .title-eco{
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .wrap-box-eco{
+    flex-direction: column;
+  }
+  
+}

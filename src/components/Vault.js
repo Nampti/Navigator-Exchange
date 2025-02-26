@@ -71,7 +71,7 @@ const Vault = () => {
       <img src={Vault2} className="left-big" alt="vault2"></img>
       <img src={Vault3} className="right-small" alt="vault3"></img>
       <img src={Vault4} className="right-big" alt="vault4"></img>
-      <div className="wrapper container vault-container">
+      <div className="container vault-container">
         <div className="left-vault">
           <div className="title-left" ref={titleRef}>
             <div>Maximize Your Yield</div>

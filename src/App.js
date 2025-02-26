@@ -1,3 +1,5 @@
+import React from "react";
+import { useState,useEffect } from "react";
 import "./App.css";
 import Banner from "./components/Banner";
 import Info from "./components/Info";
@@ -8,6 +10,18 @@ import Contact from "./components/Contact";
 import MenuLogo from "../src/assets/icon/menu-logo.png";
 
 function App() {
+  const [menuActive, setMenuActive] = useState(false);
+  const toggleMenu = () => {
+    setMenuActive(!menuActive);
+  };
+  useEffect(() => {
+    if (menuActive) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [menuActive]);
+  
   return (
     <>
       <div className="App">
@@ -18,6 +32,7 @@ function App() {
           />
         </video>
         <div className="App-content">
+          <div className={`App-header-backdrop ${menuActive ? 'active' : ''}`}></div>
           <header>
             <div className="App-header-head">
               <div className="App-header-container-left">
@@ -125,7 +140,7 @@ function App() {
             <div className="App-header-responsive">
               <div className="App-header-link-container App-header-top">
                 <div className="App-header-container-left">
-                  <div className="App-header-menu-icon-block">
+                  <div className="App-header-menu-icon-block" onClick={toggleMenu}>
                     <svg
                       stroke="currentColor"
                       fill="currentColor"
@@ -161,6 +176,19 @@ function App() {
               </div>
             </div>
           </header>
+          <div className={`App-header-links-container App-header-drawer ${menuActive ? 'active' : ''}`}>
+            <div className="App-header-links menu">
+              <div className="App-header-links-header">
+                <a className="App-header-link-main" href="#/">
+                  <img src={MenuLogo} className="small-logo" alt=""></img>
+ 
+                </a>
+                <div class="App-header-menu-icon-block mobile-cross-menu" onClick={toggleMenu}><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="App-header-menu-icon menu" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div>
+              </div>
+              <div class="App-header-link-container-menu head-landing"><a href="https://app.navigator.exchange/#/trade" class="link-underline">App</a></div>
+              <div class="App-header-link-container-menu head-landing"><a href="https://docs.navigator.exchange/" class="link-underline">Docs</a></div>
+            </div>
+          </div>
           <div className="Wrapper">
             <Banner />
             <Info />

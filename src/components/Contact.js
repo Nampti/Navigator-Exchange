@@ -75,7 +75,7 @@ const Contact = () => {
     <div className="contact">
       <div className="contact-header">
         <div style={{ background: `url(${BG1})  0% 0% / cover no-repeat` }}>
-          <div className="container wrapper">
+          <div className="container wrapper-contact-header">
             <div className="left-contact">
               <div className="contact-title" ref={titleRef}>
                 Building with the best
@@ -749,9 +749,9 @@ const Contact = () => {
       </div>
       <div className="contact-footer">
         <div className="container footer-container">
-          <div className="info">
+          <div className="info-footer">
             <div style={{ cursor: "pointer" }}>
-              <svg
+              <svg className="logo-footer"
                 width="170"
                 height="36"
                 viewBox="0 0 170 36"
