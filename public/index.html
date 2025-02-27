@@ -16,12 +16,15 @@
     <title>Navigator Exchange</title>
     <script>
       (function() {
-        var path = window.location.pathname;
-        if (path !== "/" && !path.startsWith("/#")) {
-          window.location.replace("/#"+path);
+        var homepage = "https://Namptit.github.io/Navigator-Exchange";
+        var path = window.location.pathname + window.location.search + window.location.hash;
+    
+        if (path !== "/" && !path.startsWith("/#/")) {
+          window.location.replace(homepage + "/#/");
         }
       })();
     </script>
+    
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
