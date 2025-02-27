@@ -56,6 +56,16 @@ const Contact = () => {
       alt: "BNB/USD",
     },
     {
+      href: "https://app.navigator.exchange/#/trade?symbol=OP/USD",
+      src: Icon6,
+      alt: "OP/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=SOL/USD",
+      src: Icon7,
+      alt: "SOL/USD",
+    },
+    {
       href: "https://app.navigator.exchange/#/trade?symbol=ARB/USD",
       src: Icon8,
       alt: "ARB/USD",
@@ -84,6 +94,71 @@ const Contact = () => {
       href: "https://app.navigator.exchange/#/trade?symbol=TRUMP/USD",
       src: Icon13,
       alt: "TRUMP/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=MELANIA/USD",
+      src: Icon14,
+      alt: "MELANIA/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=AIXBT/USD",
+      src: Icon15,
+      alt: "AIXBT/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=ANON/USD",
+      src: Icon16,
+      alt: "ANON/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=BERA/USD",
+      src: Icon17,
+      alt: "BERA/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=LTC/USD",
+      src: Icon18,
+      alt: "LTC/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=ADA/USD",
+      src: Icon19,
+      alt: "ADA/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=HYPE/USD",
+      src: Icon20,
+      alt: "HYPE/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=EUR/USD",
+      src: Icon21,
+      alt: "EUR/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=XAU/USD",
+      src: Icon22,
+      alt: "XAU/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=GBP/USD",
+      src: Icon23,
+      alt: "GBP/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=XAG/USD",
+      src: Icon24,
+      alt: "XAG/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=AUD/USD",
+      src: Icon25,
+      alt: "AUD/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=NZD/USD",
+      src: Icon26,
+      alt: "NZD/USD",
     },
   ];
   const titleRef = useRef(null);
@@ -147,7 +222,7 @@ const Contact = () => {
             </div>
             <div className="right-contact">
               <div className="rfm-marquee-container">
-                <div className="rfm-marquee quick">
+                <div className="rfm-marquee">
                   <div className="rfm-initial-child-container">
                     {partnerItems.map((item, index) => (
                       <div
@@ -173,7 +248,7 @@ const Contact = () => {
                     ))}
                   </div>
                 </div>
-                <div className="rfm-marquee quick">
+                <div className="rfm-marquee">
                   {partnerItems.map((item, index) => (
                     <div
                       className="rfm-child"
@@ -199,7 +274,7 @@ const Contact = () => {
                 </div>
               </div>
               <div className="rfm-marquee-container">
-                <div className="rfm-marquee reverse quick">
+                <div className="rfm-marquee reverse">
                   <div className="rfm-initial-child-container">
                     {partnerItems.map((item, index) => (
                       <div
@@ -225,7 +300,7 @@ const Contact = () => {
                     ))}
                   </div>
                 </div>
-                <div className="rfm-marquee reverse quick">
+                <div className="rfm-marquee reverse">
                   {partnerItems.map((item, index) => (
                     <div
                       className="rfm-child"
@@ -251,7 +326,7 @@ const Contact = () => {
                 </div>
               </div>
               <div className="rfm-marquee-container">
-                <div className="rfm-marquee quick">
+                <div className="rfm-marquee">
                   <div className="rfm-initial-child-container">
                     {partnerItems.map((item, index) => (
                       <div
@@ -277,7 +352,7 @@ const Contact = () => {
                     ))}
                   </div>
                 </div>
-                <div className="rfm-marquee quick">
+                <div className="rfm-marquee">
                   {partnerItems.map((item, index) => (
                     <div
                       className="rfm-child"
