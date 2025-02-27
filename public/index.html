@@ -13,7 +13,15 @@
     
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     
-    <title>Navigator Exchange</title>  
+    <title>Navigator Exchange</title>
+    <script>
+      (function() {
+        var path = window.location.pathname;
+        if (path !== "/" && !path.startsWith("/#")) {
+          window.location.replace("/#"+path);
+        }
+      })();
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
