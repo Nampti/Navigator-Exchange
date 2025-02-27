@@ -16,8 +16,12 @@ import MenuItem5 from "../src/assets/icon/menuitem5.svg";
 
 function App() {
   const [menuActive, setMenuActive] = useState(false);
+  const [miniMenuActive, setMiniMenuActive] = useState(false);
   const toggleMenu = () => {
     setMenuActive(!menuActive);
+  };
+  const toggleMiniMenu = () => {
+    setMiniMenuActive(!miniMenuActive);
   };
   useEffect(() => {
     if (menuActive) {
@@ -108,7 +112,188 @@ function App() {
                     </defs>
                   </svg>
                 </div>
-                <div className="App-header-links"></div>
+                <div className="App-header-links">
+                  <div className="App-header-links-item">
+                    <a
+                      href="https://app.navigator.exchange/#/dashboard"
+                      className="link-underline"
+                      target="_self"
+                      rel="noopener noreferrer"
+                    >
+                      Dashboard
+                    </a>
+                  </div>
+                  <div className="App-header-links-item">
+                    <a
+                      href="https://docs.navigator.exchange/"
+                      className="link-underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Perp
+                    </a>
+                  </div>
+                  <div className="App-header-links-item">
+                    <a
+                      href="https://docs.navigator.exchange/"
+                      className="link-underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Swap
+                    </a>
+                  </div>
+                  <div className="App-header-links-item dropdown">
+                    <div className="App-header-dropdown">
+                      <span className="More">
+                        Earn
+                        <svg
+                          className="arrow-menu"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="#828899"
+                          class="arrow-icon-tab-header"
+                        >
+                          <path
+                            className="arrow-menu-path"
+                            d="M7.66536 11.3333L11.4181 5.83333L3.91259 5.83333L7.66536 11.3333Z"
+                            fill="#828899"
+                          ></path>
+                        </svg>
+                        <div className="show-dropdown">
+                          <div className="show-dropdown-menu">
+                            <a className="menu-item-container" href="#/earn">
+                              <div class="menu-item">
+                                <img src={MenuItem1} alt="" />
+                                <div class="wrap">
+                                  <span>Overview</span>
+                                  <span class="desc">Manage your earning</span>
+                                </div>
+                              </div>{" "}
+                            </a>
+                            <a className="menu-item-container" href="#/earn">
+                              <div class="menu-item">
+                                <img src={MenuItem2} alt="" />
+                                <div class="wrap">
+                                  <span>Stake NAVI & esNAVI</span>
+                                  <span class="desc">
+                                    Stake Navigator governance token
+                                  </span>
+                                </div>
+                              </div>{" "}
+                            </a>
+                            <a className="menu-item-container" href="#/earn">
+                              <div class="menu-item">
+                                <img src={MenuItem3} alt="" />
+                                <div class="wrap">
+                                  <span>Crypto Pool - NLP</span>
+                                  <span class="desc">
+                                    Index by crypto asset
+                                  </span>
+                                </div>
+                              </div>{" "}
+                            </a>
+                            <a className="menu-item-container" href="#/earn">
+                              <div class="menu-item">
+                                <img src={MenuItem4} alt="" />
+                                <div class="wrap">
+                                  <span>Stable Pool - NSLP</span>
+                                  <span class="desc">
+                                    Index by stable asset
+                                  </span>
+                                </div>
+                              </div>{" "}
+                            </a>
+                            <a className="menu-item-container" href="#/earn">
+                              <div class="menu-item">
+                                <img src={MenuItem5} alt="" />
+                                <div class="wrap">
+                                  <span>Vest</span>
+                                  <span class="desc">
+                                    Convert esNAVI tokens to NAVI tokens
+                                  </span>
+                                </div>
+                              </div>{" "}
+                            </a>
+                          </div>
+                        </div>
+                      </span>
+                    </div>
+                  </div>
+                  <div className="App-header-links-item">
+                    <a
+                      href="https://docs.navigator.exchange/"
+                      className="link-underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Vaults
+                    </a>
+                  </div>
+                  <div className="App-header-links-item">
+                    <a
+                      href="https://docs.navigator.exchange/"
+                      className="link-underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Buy
+                    </a>
+                  </div>
+                  <div className="App-header-links-item">
+                    <a
+                      href="https://docs.navigator.exchange/"
+                      className="link-underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Referrals
+                    </a>
+                  </div>
+                  <div className="App-header-links-item">
+                    <a
+                      href="https://docs.navigator.exchange/"
+                      className="link-underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Portfolio
+                    </a>
+                  </div>
+                  <div className="App-header-links-item">
+                    <a
+                      href="https://docs.navigator.exchange/"
+                      className="link-underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Analytics
+                      <span className="special">Contest</span>
+                    </a>
+                  </div>
+                  <div className="App-header-links-item">
+                    <a
+                      href="https://docs.navigator.exchange/"
+                      className="link-underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      NFTs
+                    </a>
+                  </div>
+                  <div className="App-header-links-item">
+                    <a
+                      href="https://docs.navigator.exchange/"
+                      className="link-underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Migrate
+                    </a>
+                  </div>
+                </div>
               </div>
               <div className="App-header-container-right">
                 <div className="App-header-user">
@@ -196,38 +381,42 @@ function App() {
                   </svg>
                 </div>
               </div>
-              <div className="App-header-links-item">
+              <div className="App-header-links-item menu">
                 <a
                   href="https://app.navigator.exchange/#/dashboard"
-                  className="link-underline"
+                  className="link-underline menu-btn"
                   target="_self"
                   rel="noopener noreferrer"
                 >
                   Dashboard
                 </a>
               </div>
-              <div className="App-header-links-item">
+              <div className="App-header-links-item menu">
                 <a
                   href="https://docs.navigator.exchange/"
-                  className="link-underline"
+                  className="link-underline menu-btn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Perp
                 </a>
               </div>
-              <div className="App-header-links-item">
+              <div className="App-header-links-item menu">
                 <a
                   href="https://docs.navigator.exchange/"
-                  className="link-underline"
+                  className="link-underline menu-btn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Swap
                 </a>
               </div>
-              <div className="App-header-links-item dropdown">
-                <div className="App-header-dropdown">
+              <div
+                className={`App-header-links-item menu selected ${
+                  miniMenuActive ? "active" : ""
+                }`}
+              >
+                <div className="App-header-selected" onClick={toggleMiniMenu}>
                   <span className="More">
                     Earn
                     <svg
@@ -245,106 +434,106 @@ function App() {
                         fill="#828899"
                       ></path>
                     </svg>
-                    <div className="show-dropdown">
-                      <div className="show-dropdown-menu">
-                        <a className="menu-item-container" href="#/earn">
-                          <div class="menu-item">
-                            <img src={MenuItem1} alt="" />
-                            <div class="wrap">
-                              <span>Overview</span>
-                              <span class="desc">Manage your earning</span>
-                            </div>
-                          </div>{" "}
-                        </a>
-                        <a className="menu-item-container" href="#/earn">
-                          <div class="menu-item">
-                            <img src={MenuItem2} alt="" />
-                            <div class="wrap">
-                              <span>Stake NAVI & esNAVI</span>
-                              <span class="desc">
-                                Stake Navigator governance token
-                              </span>
-                            </div>
-                          </div>{" "}
-                        </a>
-                        <a className="menu-item-container" href="#/earn">
-                          <div class="menu-item">
-                            <img src={MenuItem3} alt="" />
-                            <div class="wrap">
-                              <span>Crypto Pool - NLP</span>
-                              <span class="desc">Index by crypto asset</span>
-                            </div>
-                          </div>{" "}
-                        </a>
-                        <a className="menu-item-container" href="#/earn">
-                          <div class="menu-item">
-                            <img src={MenuItem4} alt="" />
-                            <div class="wrap">
-                              <span>Stable Pool - NSLP</span>
-                              <span class="desc">Index by stable asset</span>
-                            </div>
-                          </div>{" "}
-                        </a>
-                        <a className="menu-item-container" href="#/earn">
-                          <div class="menu-item">
-                            <img src={MenuItem5} alt="" />
-                            <div class="wrap">
-                              <span>Vest</span>
-                              <span class="desc">
-                                Convert esNAVI tokens to NAVI tokens
-                              </span>
-                            </div>
-                          </div>{" "}
-                        </a>
-                      </div>
-                    </div>
                   </span>
                 </div>
+                <div
+                  className={`App-show-down ${miniMenuActive ? "active" : ""}`}
+                >
+                  <div className="show-down-item-container">
+                    <a className="show-down-item" href="#/earn">
+                      <img src={MenuItem1} alt="" />
+                      <div class="show-down-wrap">
+                        <span>Overview</span>
+                        <span class="desc">Manage your earning</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div className="show-down-item-container">
+                    <a className="show-down-item" href="#/earn">
+                      <img src={MenuItem2} alt="" />
+                      <div class="show-down-wrap">
+                        <span>Stake NAVI & esNAVI</span>
+                        <span class="desc">
+                          Stake Navigator governance token
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                  <div className="show-down-item-container">
+                    <a className="show-down-item" href="#/earn">
+                      <img src={MenuItem3} alt="" />
+                      <div class="show-down-wrap">
+                        <span>Crypto Pool - NLP</span>
+                        <span class="desc">Index by crypto asset</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div className="show-down-item-container">
+                    <a className="show-down-item" href="#/earn">
+                      <img src={MenuItem4} alt="" />
+                      <div class="show-down-wrap">
+                        <span>Stable Pool - NSLP</span>
+                        <span class="desc">Index by stable asset</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div className="show-down-item-container">
+                    <a className="show-down-item" href="#/earn">
+                      <img src={MenuItem5} alt="" />
+                      <div class="show-down-wrap">
+                        <span>Vest</span>
+                        <span class="desc">
+                          Convert esNAVI tokens to NAVI tokens
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div className="App-header-links-item">
+              <div className="App-header-links-item menu">
                 <a
                   href="https://docs.navigator.exchange/"
-                  className="link-underline"
+                  className="link-underline menu-btn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Vaults
                 </a>
               </div>
-              <div className="App-header-links-item">
+              <div className="App-header-links-item menu">
                 <a
                   href="https://docs.navigator.exchange/"
-                  className="link-underline"
+                  className="link-underline menu-btn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Buy
                 </a>
               </div>
-              <div className="App-header-links-item">
+              <div className="App-header-links-item menu">
                 <a
                   href="https://docs.navigator.exchange/"
-                  className="link-underline"
+                  className="link-underline menu-btn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Referrals
                 </a>
               </div>
-              <div className="App-header-links-item">
+              <div className="App-header-links-item menu">
                 <a
                   href="https://docs.navigator.exchange/"
-                  className="link-underline"
+                  className="link-underline menu-btn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Portfolio
                 </a>
               </div>
-              <div className="App-header-links-item">
+              <div className="App-header-links-item menu">
                 <a
                   href="https://docs.navigator.exchange/"
-                  className="link-underline"
+                  className="link-underline menu-btn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -352,20 +541,20 @@ function App() {
                   <span className="special">Contest</span>
                 </a>
               </div>
-              <div className="App-header-links-item">
+              <div className="App-header-links-item menu">
                 <a
                   href="https://docs.navigator.exchange/"
-                  className="link-underline"
+                  className="link-underline menu-btn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   NFTs
                 </a>
               </div>
-              <div className="App-header-links-item">
+              <div className="App-header-links-item menu">
                 <a
                   href="https://docs.navigator.exchange/"
-                  className="link-underline"
+                  className="link-underline menu-btn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

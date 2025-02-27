@@ -261,6 +261,8 @@
     line-height: 140%;
     color: #828899;
     display: flex;
+    align-items: center;
+    align-self: stretch;
     font-size: 14px;
     font-weight: 500;
     padding: 8px 12px;
@@ -346,6 +348,112 @@
   }
 }
 
+.App-header-links-item {
+  &.menu {
+    padding: 0 16px;
+
+    a {
+      padding: 12px 16px;
+    }
+    &.selected {
+      align-items: center;
+      align-self: stretch;
+      display: flex;
+      flex-shrink: 0;
+      height: 42px;
+      margin-left: 16px;
+      margin-right: 16px;
+      padding: 0 0 0 16px;
+      position: unset;
+
+      &.active {
+        align-items: stretch;
+        align-self: stretch;
+        background: #12141a;
+        border-radius: 16px;
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 16px;
+      }
+    }
+  }
+  .App-header-dropdown {
+    padding: 12px 16px !important;
+  }
+}
+.App-header-selected {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  gap: 8px;
+  justify-content: inherit !important;
+  font-size: normal;
+  line-height: 140%;
+  color: #828899;
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  vertical-align: middle;
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.App-show-down {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+.show-down-item-container {
+  align-items: center;
+  display: flex;
+  position: relative;
+  border-left: 2px solid #373f5c80;
+  padding: 8px 12px;
+  border-bottom: none;
+  a {
+    height: auto !important;
+    padding: 0 !important;
+  }
+}
+.show-down-item {
+  height: auto !important;
+  padding: unset !important;
+  gap: 12px;
+  img {
+    align-items: flex-start;
+    background: #ffffff1a;
+    background: var(--white-10, #ffffff1a);
+    border-radius: 12px;
+    border-radius: var(--base-unit-s-12, 12px);
+    display: flex;
+    gap: 10px;
+    padding: 8px;
+    padding: var(--base-unit-xs-8, 8px);
+  }
+}
+.show-down-wrap {
+  align-items: flex-start;
+  display: flex;
+  flex: 1 0;
+  flex-direction: column;
+  gap: 4px;
+  gap: var(--Border_radius, 4px);
+  span {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 140%;
+    &.desc {
+      color: #828899;
+      font-weight: 400;
+    }
+  }
+}
+
 .App-header-links-header {
   height: 68px;
   padding: 16px 0 16px 8px;
@@ -368,7 +476,7 @@
     font-weight: 500;
     letter-spacing: 0.1px;
     line-height: 18px;
-    padding: 12px 16px !important;
+    padding: 12px 16px;
     text-decoration: none;
     width: 100%;
     border-radius: 100px;
