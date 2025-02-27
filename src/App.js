@@ -1,5 +1,5 @@
 import React from "react";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import Banner from "./components/Banner";
 import Info from "./components/Info";
@@ -8,6 +8,11 @@ import Summary from "./components/Summary";
 import Ecosystem from "./components/Ecosystem";
 import Contact from "./components/Contact";
 import MenuLogo from "../src/assets/icon/menu-logo.png";
+import MenuItem1 from "../src/assets/icon/menuitem1.svg";
+import MenuItem2 from "../src/assets/icon/menuitem2.svg";
+import MenuItem3 from "../src/assets/icon/menuitem3.svg";
+import MenuItem4 from "../src/assets/icon/menuitem4.svg";
+import MenuItem5 from "../src/assets/icon/menuitem5.svg";
 
 function App() {
   const [menuActive, setMenuActive] = useState(false);
@@ -21,7 +26,7 @@ function App() {
       document.body.style.overflow = "unset";
     }
   }, [menuActive]);
-  
+
   return (
     <>
       <div className="App">
@@ -32,7 +37,9 @@ function App() {
           />
         </video>
         <div className="App-content">
-          <div className={`App-header-backdrop ${menuActive ? 'active' : ''}`}></div>
+          <div
+            className={`App-header-backdrop ${menuActive ? "active" : ""}`}
+          ></div>
           <header>
             <div className="App-header-head">
               <div className="App-header-container-left">
@@ -101,28 +108,7 @@ function App() {
                     </defs>
                   </svg>
                 </div>
-                <div className="App-header-links">
-                  <div className="App-header-links-item">
-                    <a
-                      href="https://app.navigator.exchange/#/trade"
-                      className="link-underline"
-                      target="_self"
-                      rel="noopener noreferrer"
-                    >
-                      App
-                    </a>
-                  </div>
-                  <div className="App-header-links-item">
-                    <a
-                      href="https://docs.navigator.exchange/"
-                      className="link-underline"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Docs
-                    </a>
-                  </div>
-                </div>
+                <div className="App-header-links"></div>
               </div>
               <div className="App-header-container-right">
                 <div className="App-header-user">
@@ -140,7 +126,10 @@ function App() {
             <div className="App-header-responsive">
               <div className="App-header-link-container App-header-top">
                 <div className="App-header-container-left">
-                  <div className="App-header-menu-icon-block" onClick={toggleMenu}>
+                  <div
+                    className="App-header-menu-icon-block"
+                    onClick={toggleMenu}
+                  >
                     <svg
                       stroke="currentColor"
                       fill="currentColor"
@@ -176,17 +165,213 @@ function App() {
               </div>
             </div>
           </header>
-          <div className={`App-header-links-container App-header-drawer ${menuActive ? 'active' : ''}`}>
+          <div
+            className={`App-header-links-container App-header-drawer ${
+              menuActive ? "active" : ""
+            }`}
+          >
             <div className="App-header-links menu">
               <div className="App-header-links-header">
                 <a className="App-header-link-main" href="#/">
                   <img src={MenuLogo} className="small-logo" alt=""></img>
- 
                 </a>
-                <div class="App-header-menu-icon-block mobile-cross-menu" onClick={toggleMenu}><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="App-header-menu-icon menu" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div>
+                <div
+                  class="App-header-menu-icon-block mobile-cross-menu"
+                  onClick={toggleMenu}
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="App-header-menu-icon menu"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </div>
               </div>
-              <div class="App-header-link-container-menu head-landing"><a href="https://app.navigator.exchange/#/trade" class="link-underline">App</a></div>
-              <div class="App-header-link-container-menu head-landing"><a href="https://docs.navigator.exchange/" class="link-underline">Docs</a></div>
+              <div className="App-header-links-item">
+                <a
+                  href="https://app.navigator.exchange/#/dashboard"
+                  className="link-underline"
+                  target="_self"
+                  rel="noopener noreferrer"
+                >
+                  Dashboard
+                </a>
+              </div>
+              <div className="App-header-links-item">
+                <a
+                  href="https://docs.navigator.exchange/"
+                  className="link-underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Perp
+                </a>
+              </div>
+              <div className="App-header-links-item">
+                <a
+                  href="https://docs.navigator.exchange/"
+                  className="link-underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Swap
+                </a>
+              </div>
+              <div className="App-header-links-item dropdown">
+                <div className="App-header-dropdown">
+                  <span className="More">
+                    Earn
+                    <svg
+                      className="arrow-menu"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="#828899"
+                      class="arrow-icon-tab-header"
+                    >
+                      <path
+                        className="arrow-menu-path"
+                        d="M7.66536 11.3333L11.4181 5.83333L3.91259 5.83333L7.66536 11.3333Z"
+                        fill="#828899"
+                      ></path>
+                    </svg>
+                    <div className="show-dropdown">
+                      <div className="show-dropdown-menu">
+                        <a className="menu-item-container" href="#/earn">
+                          <div class="menu-item">
+                            <img src={MenuItem1} alt="" />
+                            <div class="wrap">
+                              <span>Overview</span>
+                              <span class="desc">Manage your earning</span>
+                            </div>
+                          </div>{" "}
+                        </a>
+                        <a className="menu-item-container" href="#/earn">
+                          <div class="menu-item">
+                            <img src={MenuItem2} alt="" />
+                            <div class="wrap">
+                              <span>Stake NAVI & esNAVI</span>
+                              <span class="desc">
+                                Stake Navigator governance token
+                              </span>
+                            </div>
+                          </div>{" "}
+                        </a>
+                        <a className="menu-item-container" href="#/earn">
+                          <div class="menu-item">
+                            <img src={MenuItem3} alt="" />
+                            <div class="wrap">
+                              <span>Crypto Pool - NLP</span>
+                              <span class="desc">Index by crypto asset</span>
+                            </div>
+                          </div>{" "}
+                        </a>
+                        <a className="menu-item-container" href="#/earn">
+                          <div class="menu-item">
+                            <img src={MenuItem4} alt="" />
+                            <div class="wrap">
+                              <span>Stable Pool - NSLP</span>
+                              <span class="desc">Index by stable asset</span>
+                            </div>
+                          </div>{" "}
+                        </a>
+                        <a className="menu-item-container" href="#/earn">
+                          <div class="menu-item">
+                            <img src={MenuItem5} alt="" />
+                            <div class="wrap">
+                              <span>Vest</span>
+                              <span class="desc">
+                                Convert esNAVI tokens to NAVI tokens
+                              </span>
+                            </div>
+                          </div>{" "}
+                        </a>
+                      </div>
+                    </div>
+                  </span>
+                </div>
+              </div>
+              <div className="App-header-links-item">
+                <a
+                  href="https://docs.navigator.exchange/"
+                  className="link-underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Vaults
+                </a>
+              </div>
+              <div className="App-header-links-item">
+                <a
+                  href="https://docs.navigator.exchange/"
+                  className="link-underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Buy
+                </a>
+              </div>
+              <div className="App-header-links-item">
+                <a
+                  href="https://docs.navigator.exchange/"
+                  className="link-underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Referrals
+                </a>
+              </div>
+              <div className="App-header-links-item">
+                <a
+                  href="https://docs.navigator.exchange/"
+                  className="link-underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Portfolio
+                </a>
+              </div>
+              <div className="App-header-links-item">
+                <a
+                  href="https://docs.navigator.exchange/"
+                  className="link-underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Analytics
+                  <span className="special">Contest</span>
+                </a>
+              </div>
+              <div className="App-header-links-item">
+                <a
+                  href="https://docs.navigator.exchange/"
+                  className="link-underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  NFTs
+                </a>
+              </div>
+              <div className="App-header-links-item">
+                <a
+                  href="https://docs.navigator.exchange/"
+                  className="link-underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Migrate
+                </a>
+              </div>
             </div>
           </div>
           <div className="Wrapper">

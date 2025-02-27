@@ -888,7 +888,10 @@ const Banner = () => {
             </a>
           </div>
         </div>
-        <div className="wrap-overview-container" ref={wrapOverviewContainerRef}>
+        <div
+          className="container wrap-overview-container"
+          ref={wrapOverviewContainerRef}
+        >
           <div
             className="item-overview"
             ref={(el) => (itemOverviewRefs.current[0] = el)}

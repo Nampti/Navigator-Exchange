@@ -1,5 +1,5 @@
 {
-  "name": "Navigator Exchange",
+  "name": "NavigatorExchange",
   "version": "0.1.0",
   "private": false,
   "homepage": "https://Namptit.github.io/Navigator-Exchange",
@@ -11,6 +11,7 @@
     "ethers": "^5.7.2",
     "navigator": "file:",
     "Navigator-Exchange": "file:",
+    "NavigatorExchange": "file:",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scripts": "5.0.1",

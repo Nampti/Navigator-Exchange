@@ -44,7 +44,6 @@
 .App-header-responsive {
   display: none;
 
-
   @media screen and (max-width: 1350px) {
     display: flex;
     align-items: center;
@@ -60,7 +59,6 @@
 
   @media screen and (max-width: 450px) {
     padding: 12px 6px;
-
   }
 
   .App-header-top {
@@ -73,6 +71,116 @@
   .App-header-link-container {
     align-items: center;
   }
+}
+.show-dropdown {
+  display: none;
+}
+.More:hover .show-dropdown {
+  display: block;
+}
+.show-dropdown {
+  padding-top: 8px;
+  position: absolute;
+  top: 19px;
+  left: 0px;
+  z-index: 99999;
+  .show-dropdown-menu {
+    border-radius: 16px;
+    background: #262933 !important;
+    position: static;
+    min-width: 360px !important;
+    padding: 8px;
+    width: 360px !important;
+    box-shadow: 0 4px 24px 0 #00000040;
+    cursor: pointer;
+    list-style: none;
+    outline: none;
+    overflow: hidden;
+    .menu-item-container {
+      padding: 4px 0;
+      .menu-item {
+        border-radius: 16px;
+        padding: 12px;
+        width: 100%;
+        gap: 12px;
+        display: flex !important;
+        align-items: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        opacity: 1;
+        img {
+          align-items: flex-start;
+          background: #90fb750d;
+          border: 2px solid #90fb750d;
+          border-radius: 12px;
+          display: flex;
+          gap: 10px;
+          height: 40px;
+          padding: 8px;
+          width: 40px;
+          left: -2px;
+          position: relative;
+          top: -1px;
+        }
+        .wrap {
+          align-items: flex-start;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          color: #fff;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 140%;
+          .desc {
+            color: var(--Text-Text_Secondary, #828899);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            white-space: nowrap;
+          }
+        }
+      }
+      .menu-item:hover {
+        background: #1a1d26 !important;
+      }
+    }
+  }
+}
+
+.App-header-dropdown {
+  line-height: 140%;
+  color: #828899;
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  .More {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-weight: 500;
+    line-height: 140%;
+    top: -1px;
+  }
+  .More:hover {
+    color: #2ecf06 !important;
+    .arrow-menu {
+      fill: #2ecf06 !important;
+    }
+    .arrow-menu-path {
+      fill: #2ecf06 !important;
+    }
+  }
+}
+.More:hover + .show-dropdown {
+  display: block;
 }
 
 .App-header-container-left {
@@ -88,7 +196,6 @@
 
   @media screen and (max-width: 450px) {
     margin-right: 4px !important;
-
   }
 }
 
@@ -101,7 +208,6 @@
 
   @media screen and (max-width: 450px) {
     margin: 4px 5px !important;
-
   }
 }
 
@@ -121,13 +227,14 @@
   @media screen and (max-width: 450px) {
     padding: 1.5px !important;
     margin: 0px !important;
-
-
   }
 
   @media screen and (max-width: 1350px) {
     img {
       height: 21px;
+    }
+    .small-logo {
+      height: 36px;
     }
   }
 }
@@ -246,8 +353,6 @@
   display: flex;
   justify-content: space-between;
   margin-left: 16px;
-
-
 }
 
 .App-header-link-container-menu {
@@ -261,7 +366,7 @@
     display: block;
     font-size: 14px;
     font-weight: 500;
-    letter-spacing: .1px;
+    letter-spacing: 0.1px;
     line-height: 18px;
     padding: 12px 16px !important;
     text-decoration: none;
@@ -276,9 +381,7 @@
 
   a:active {
     color: #79ee5c;
-
   }
-
 }
 
 .App-header-menu-icon {
@@ -322,7 +425,6 @@
     max-width: 90%;
     padding: 0;
   }
-
 }
 
 .wrapper {
@@ -331,7 +433,7 @@
   align-self: stretch;
 }
 
-.wrapper> :not(:first-child) {
+.wrapper > :not(:first-child) {
   margin-left: -2px;
 }
 
@@ -357,7 +459,6 @@
   @media screen and (max-width: 1350px) {
     width: 100vw;
   }
-
 }
 
 .contest {
@@ -391,10 +492,8 @@
   @media screen and (max-width: 550px) {
     display: flex;
     flex-direction: column;
-
   }
 }
-
 
 @media screen and (max-width: 550px) {
   .contest-title {
@@ -415,7 +514,6 @@
     top: 3px !important;
   }
 }
-
 
 .details {
   cursor: pointer;
