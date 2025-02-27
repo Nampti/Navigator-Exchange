@@ -15,6 +15,23 @@ import MenuItem4 from "../src/assets/icon/menuitem4.svg";
 import MenuItem5 from "../src/assets/icon/menuitem5.svg";
 
 function App() {
+  const menuItems = [
+    { href: "https://app.navigator.exchange/#/dashboard", text: "Dashboard" },
+    { href: "https://docs.navigator.exchange/", text: "Perp" },
+    { href: "https://docs.navigator.exchange/", text: "Swap" },
+    { href: "https://docs.navigator.exchange/", text: "Vaults" },
+    { href: "https://docs.navigator.exchange/", text: "Buy" },
+    { href: "https://docs.navigator.exchange/", text: "Referrals" },
+    { href: "https://docs.navigator.exchange/", text: "Portfolio" },
+    {
+      href: "https://docs.navigator.exchange/",
+      text: "Analytics",
+      special: "Contest",
+    },
+    { href: "https://docs.navigator.exchange/", text: "NFTs" },
+    { href: "https://docs.navigator.exchange/", text: "Migrate" },
+  ];
+
   const [menuActive, setMenuActive] = useState(false);
   const [miniMenuActive, setMiniMenuActive] = useState(false);
   const toggleMenu = () => {
