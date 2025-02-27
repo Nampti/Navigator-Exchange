@@ -1,0 +1,30 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_12586_27274)">
+<rect width="40" height="40" rx="20" fill="white"/>
+<g clip-path="url(#clip1_12586_27274)">
+<path d="M10.1683 26.0168C10.3443 25.8408 10.5863 25.7381 10.843 25.7381H34.1181C34.5434 25.7381 34.7561 26.2514 34.4554 26.5521L29.8576 31.1499C29.6816 31.3259 29.4396 31.4286 29.1829 31.4286H5.90781C5.4825 31.4286 5.26984 30.9153 5.57049 30.6146L10.1683 26.0168Z" fill="url(#paint0_linear_12586_27274)"/>
+<path d="M10.1683 8.8501C10.3516 8.6741 10.5936 8.57144 10.843 8.57144H34.1181C34.5434 8.57144 34.7561 9.08476 34.4554 9.38541L29.8576 13.9832C29.6816 14.1592 29.4396 14.2619 29.1829 14.2619H5.90781C5.4825 14.2619 5.26984 13.7486 5.57049 13.4479L10.1683 8.8501Z" fill="url(#paint1_linear_12586_27274)"/>
+<path d="M29.8576 17.3784C29.6816 17.2025 29.4396 17.0998 29.1829 17.0998H5.90781C5.4825 17.0998 5.26984 17.6131 5.57049 17.9138L10.1683 22.5116C10.3443 22.6876 10.5863 22.7902 10.843 22.7902H34.1181C34.5434 22.7902 34.7561 22.2769 34.4554 21.9763L29.8576 17.3784Z" fill="url(#paint2_linear_12586_27274)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_12586_27274" x1="31.8946" y1="5.82482" x2="15.7864" y2="36.6786" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00FFA3"/>
+<stop offset="1" stop-color="#DC1FFF"/>
+</linearGradient>
+<linearGradient id="paint1_linear_12586_27274" x1="24.8512" y1="2.14758" x2="8.74299" y2="33.0013" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00FFA3"/>
+<stop offset="1" stop-color="#DC1FFF"/>
+</linearGradient>
+<linearGradient id="paint2_linear_12586_27274" x1="28.3505" y1="3.9745" x2="12.2423" y2="34.8283" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00FFA3"/>
+<stop offset="1" stop-color="#DC1FFF"/>
+</linearGradient>
+<clipPath id="clip0_12586_27274">
+<rect width="40" height="40" rx="20" fill="white"/>
+</clipPath>
+<clipPath id="clip1_12586_27274">
+<rect width="29.1636" height="22.8571" fill="white" transform="translate(5.42969 8.57144)"/>
+</clipPath>
+</defs>
+</svg>
