@@ -189,56 +189,36 @@ const Banner = () => {
       { threshold: 0.1 }
     );
 
-    if (titleRef.current) {
-      observer.observe(titleRef.current);
-    }
-    if (descRef.current) {
-      observer.observe(descRef.current);
-    }
-    if (buttonRef.current) {
-      observer.observe(buttonRef.current);
-    }
-    if (audiLeftRef.current) {
-      observer.observe(audiLeftRef.current);
-    }
-    if (audiRightRef.current) {
-      observer.observe(audiRightRef.current);
-    }
-    if (wrapOverviewContainerRef.current) {
-      observer.observe(wrapOverviewContainerRef.current);
-    }
-    itemOverviewRefs.current.forEach((ref) => {
-      if (ref) {
-        observer.observe(ref);
-      }
-    });
+    // Store ref elements in variables
+    const titleElement = titleRef.current;
+    const descElement = descRef.current;
+    const buttonElement = buttonRef.current;
+    const audiLeftElement = audiLeftRef.current;
+    const audiRightElement = audiRightRef.current;
+    const wrapOverviewElement = wrapOverviewContainerRef.current;
+    const itemElements = itemOverviewRefs.current.filter((ref) => ref !== null);
+
+    // Observe elements
+    if (titleElement) observer.observe(titleElement);
+    if (descElement) observer.observe(descElement);
+    if (buttonElement) observer.observe(buttonElement);
+    if (audiLeftElement) observer.observe(audiLeftElement);
+    if (audiRightElement) observer.observe(audiRightElement);
+    if (wrapOverviewElement) observer.observe(wrapOverviewElement);
+    itemElements.forEach((element) => observer.observe(element));
 
     return () => {
-      if (titleRef.current) {
-        observer.unobserve(titleRef.current);
-      }
-      if (descRef.current) {
-        observer.unobserve(descRef.current);
-      }
-      if (buttonRef.current) {
-        observer.unobserve(buttonRef.current);
-      }
-      if (audiLeftRef.current) {
-        observer.unobserve(audiLeftRef.current);
-      }
-      if (audiRightRef.current) {
-        observer.unobserve(audiRightRef.current);
-      }
-      if (wrapOverviewContainerRef.current) {
-        observer.unobserve(wrapOverviewContainerRef.current);
-      }
-      itemOverviewRefs.current.forEach((ref) => {
-        if (ref) {
-          observer.unobserve(ref);
-        }
-      });
+      // Unobserve elements using stored references
+      if (titleElement) observer.unobserve(titleElement);
+      if (descElement) observer.unobserve(descElement);
+      if (buttonElement) observer.unobserve(buttonElement);
+      if (audiLeftElement) observer.unobserve(audiLeftElement);
+      if (audiRightElement) observer.unobserve(audiRightElement);
+      if (wrapOverviewElement) observer.unobserve(wrapOverviewElement);
+      itemElements.forEach((element) => observer.unobserve(element));
     };
   }, []);
+
   return (
     <div className="banner">
       <div className="overplay"></div>

@@ -181,28 +181,21 @@ const Contact = () => {
       { threshold: 0.1 }
     );
 
-    if (titleRef.current) {
-      observer.observe(titleRef.current);
-    }
-    if (descRef.current) {
-      observer.observe(descRef.current);
-    }
-    if (buttonRef.current) {
-      observer.observe(buttonRef.current);
-    }
+    const titleEl = titleRef.current;
+    const descEl = descRef.current;
+    const buttonEl = buttonRef.current;
+
+    if (titleEl) observer.observe(titleEl);
+    if (descEl) observer.observe(descEl);
+    if (buttonEl) observer.observe(buttonEl);
 
     return () => {
-      if (titleRef.current) {
-        observer.unobserve(titleRef.current);
-      }
-      if (descRef.current) {
-        observer.unobserve(descRef.current);
-      }
-      if (buttonRef.current) {
-        observer.unobserve(buttonRef.current);
-      }
+      if (titleEl) observer.unobserve(titleEl);
+      if (descEl) observer.unobserve(descEl);
+      if (buttonEl) observer.unobserve(buttonEl);
     };
-  });
+  }, []);
+
   return (
     <div className="contact">
       <div className="contact-header">

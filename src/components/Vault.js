@@ -51,6 +51,7 @@ const Vault = () => {
       buttonDisabled: true,
     },
   ];
+
   const titleRef = useRef(null);
   const descRef = useRef(null);
   const containerRef = useRef(null);
@@ -60,48 +61,24 @@ const Vault = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            entry.target.classList.remove("hidden");
-          } else {
-            entry.target.classList.add("hidden");
-            entry.target.classList.remove("visible");
-          }
+          entry.target.classList.toggle("visible", entry.isIntersecting);
+          entry.target.classList.toggle("hidden", !entry.isIntersecting);
         });
       },
       { threshold: 0.1 }
     );
 
-    if (titleRef.current) {
-      observer.observe(titleRef.current);
-    }
-    if (descRef.current) {
-      observer.observe(descRef.current);
-    }
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
-    itemRefs.current.forEach((ref) => {
-      if (ref) {
-        observer.observe(ref);
-      }
-    });
+    const elements = [
+      titleRef.current,
+      descRef.current,
+      containerRef.current,
+      ...itemRefs.current,
+    ];
+
+    elements.forEach((el) => el && observer.observe(el));
 
     return () => {
-      if (titleRef.current) {
-        observer.unobserve(titleRef.current);
-      }
-      if (descRef.current) {
-        observer.unobserve(descRef.current);
-      }
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
-      }
-      itemRefs.current.forEach((ref) => {
-        if (ref) {
-          observer.unobserve(ref);
-        }
-      });
+      elements.forEach((el) => el && observer.unobserve(el));
     };
   }, []);
 

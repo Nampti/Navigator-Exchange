@@ -7,6 +7,7 @@ const Ecosystem = () => {
   const titleRef = useRef(null);
   const containerRef = useRef(null);
   const itemRefs = useRef([]);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -23,34 +24,21 @@ const Ecosystem = () => {
       { threshold: 0.1 }
     );
 
-    if (titleRef.current) {
-      observer.observe(titleRef.current);
-    }
+    const titleEl = titleRef.current;
+    const containerEl = containerRef.current;
+    const itemEls = itemRefs.current;
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
-    itemRefs.current.forEach((ref) => {
-      if (ref) {
-        observer.observe(ref);
-      }
-    });
+    if (titleEl) observer.observe(titleEl);
+    if (containerEl) observer.observe(containerEl);
+    itemEls.forEach((ref) => ref && observer.observe(ref));
 
     return () => {
-      if (titleRef.current) {
-        observer.unobserve(titleRef.current);
-      }
-
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
-      }
-      itemRefs.current.forEach((ref) => {
-        if (ref) {
-          observer.unobserve(ref);
-        }
-      });
+      if (titleEl) observer.unobserve(titleEl);
+      if (containerEl) observer.unobserve(containerEl);
+      itemEls.forEach((ref) => ref && observer.unobserve(ref));
     };
   }, []);
+
   return (
     <div className="ecosystem">
       <div className="container ecosystem-wrapper">

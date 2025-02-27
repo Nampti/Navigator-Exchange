@@ -26,24 +26,15 @@ const Info = () => {
       { threshold: 0.1 }
     );
 
-    if (titleRef.current) {
-      observer.observe(titleRef.current);
-    }
-    itemRefs.current.forEach((ref) => {
-      if (ref) {
-        observer.observe(ref);
-      }
-    });
+    const titleEl = titleRef.current;
+    const itemEls = itemRefs.current;
+
+    if (titleEl) observer.observe(titleEl);
+    itemEls.forEach((ref) => ref && observer.observe(ref));
 
     return () => {
-      if (titleRef.current) {
-        observer.unobserve(titleRef.current);
-      }
-      itemRefs.current.forEach((ref) => {
-        if (ref) {
-          observer.unobserve(ref);
-        }
-      });
+      if (titleEl) observer.unobserve(titleEl);
+      itemEls.forEach((ref) => ref && observer.unobserve(ref));
     };
   }, []);
 
