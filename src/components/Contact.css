@@ -151,6 +151,7 @@
   font-weight: 500;
   line-height: 140%;
   text-decoration: none;
+  width: unset !important;
 }
 
 @keyframes fadeInDown-title {
