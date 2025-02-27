@@ -265,7 +265,7 @@ function App() {
                   <div className="App-header-links-item">
                     <a
                       href="https://docs.navigator.exchange/"
-                      className="link-underline"
+                      className="link-underline item-special"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -417,7 +417,7 @@ function App() {
                 }`}
               >
                 <div className="App-header-selected" onClick={toggleMiniMenu}>
-                  <span className="More">
+                  <span className={`More ${miniMenuActive ? "active" : ""}`}>
                     Earn
                     <svg
                       className="arrow-menu"
@@ -533,7 +533,7 @@ function App() {
               <div className="App-header-links-item menu">
                 <a
                   href="https://docs.navigator.exchange/"
-                  className="link-underline menu-btn"
+                  className="link-underline item-menu-special"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

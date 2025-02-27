@@ -75,9 +75,21 @@
 .show-dropdown {
   display: none;
 }
+.More {
+  &.active {
+    color: #90fb75;
+    .arrow-menu {
+      fill: #2ecf06 !important;
+    }
+    .arrow-menu-path {
+      fill: #2ecf06 !important;
+    }
+  }
+}
 .More:hover .show-dropdown {
   display: block;
 }
+
 .show-dropdown {
   padding-top: 8px;
   position: absolute;
@@ -173,9 +185,13 @@
     color: #2ecf06 !important;
     .arrow-menu {
       fill: #2ecf06 !important;
+      width: 16px;
+      height: 16px;
     }
     .arrow-menu-path {
       fill: #2ecf06 !important;
+      width: 16px;
+      height: 16px;
     }
   }
 }
@@ -250,11 +266,41 @@
     display: unset;
   }
 }
-
+@keyframes background-slide {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
+}
 .App-header-links-item {
   align-items: center;
   display: flex;
   position: relative;
+  .item-special {
+    position: relative;
+    .special {
+      position: absolute;
+      top: 25px;
+      right: 11px;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 140%;
+      background-clip: text;
+      color: transparent;
+      animation: 5s linear 0s infinite normal none running background-slide;
+      background-size: 200%;
+      background-image: linear-gradient(
+        277deg,
+        rgb(255, 255, 255),
+        rgb(255, 113, 27) 14.3%,
+        rgb(133, 197, 224) 84.72%,
+        rgb(255, 255, 255)
+      );
+    }
+  }
 
   a {
     font-size: normal;
@@ -380,6 +426,27 @@
   .App-header-dropdown {
     padding: 12px 16px !important;
   }
+  .item-menu-special {
+    position: relative;
+    gap: 4px;
+    .special {
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 140%;
+      background-clip: text;
+      color: transparent;
+      animation: 5s linear 0s infinite normal none running background-slide;
+      background-size: 200%;
+      background-image: linear-gradient(
+        277deg,
+        rgb(255, 255, 255),
+        rgb(255, 113, 27) 14.3%,
+        rgb(133, 197, 224) 84.72%,
+        rgb(255, 255, 255)
+      );
+    }
+  }
 }
 .App-header-selected {
   align-items: center;
@@ -395,6 +462,7 @@
   font-weight: 500;
   text-decoration: none;
   vertical-align: middle;
+  padding: 12px 16px 12px 0;
   span {
     display: flex;
     align-items: center;

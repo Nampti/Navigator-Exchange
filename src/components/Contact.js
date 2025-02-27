@@ -29,6 +29,63 @@ import Icon24 from "../assets/icon/ic_xag_40.51412bb797e415c7c191.svg";
 import Icon25 from "../assets/icon/ic_aud_40.d4190362c7a1d96161e5.svg";
 import Icon26 from "../assets/icon/ic_nzd_40.7fea2bb4dfed2a0964f0.svg";
 const Contact = () => {
+  const partnerItems = [
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=BTC/USD",
+      src: Icon1,
+      alt: "BTC/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=ETH/USD",
+      src: Icon2,
+      alt: "ETH/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=LINK/USD",
+      src: Icon3,
+      alt: "LINK/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=XRP/USD",
+      src: Icon4,
+      alt: "XRP/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=BNB/USD",
+      src: Icon5,
+      alt: "BNB/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=ARB/USD",
+      src: Icon8,
+      alt: "ARB/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=ORDI/USD",
+      src: Icon9,
+      alt: "ORDI/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=SUI/USD",
+      src: Icon10,
+      alt: "SUI/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=PEPE/USD",
+      src: Icon11,
+      alt: "PEPE/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=S/USD",
+      src: Icon12,
+      alt: "S/USD",
+    },
+    {
+      href: "https://app.navigator.exchange/#/trade?symbol=TRUMP/USD",
+      src: Icon13,
+      alt: "TRUMP/USD",
+    },
+  ];
   const titleRef = useRef(null);
   const descRef = useRef(null);
   const buttonRef = useRef(null);
@@ -92,655 +149,157 @@ const Contact = () => {
               <div className="rfm-marquee-container">
                 <div className="rfm-marquee quick">
                   <div className="rfm-initial-child-container">
-                    <div
-                      className="rfm-child"
-                      style={{ "--transform": "none" }}
-                    >
-                      <a
-                        href="https://app.navigator.exchange/#/trade?symbol=BTC/USD"
-                        className="link-underline wrap-coin"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    {partnerItems.map((item, index) => (
+                      <div
+                        className="rfm-child"
+                        style={{ "--transform": "none" }}
+                        key={index}
                       >
-                        <div className="item-partner">
-                          <img
-                            className="icon-partner"
-                            src={Icon1}
-                            alt="symbol"
-                          />
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      className="rfm-child"
-                      style={{ "--transform": "none" }}
-                    >
-                      <a
-                        href="https://app.navigator.exchange/#/trade?symbol=ETH/USD"
-                        className="link-underline wrap-coin"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div className="item-partner">
-                          <img
-                            className="icon-partner"
-                            src={Icon2}
-                            alt="symbol"
-                          />
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      className="rfm-child"
-                      style={{ "--transform": "none" }}
-                    >
-                      <a
-                        href="https://app.navigator.exchange/#/trade?symbol=LINK/USD"
-                        className="link-underline wrap-coin"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div className="item-partner">
-                          <img
-                            className="icon-partner"
-                            src={Icon3}
-                            alt="symbol"
-                          />
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      className="rfm-child"
-                      style={{ "--transform": "none" }}
-                    >
-                      <a
-                        href="https://app.navigator.exchange/#/trade?symbol=XRP/USD"
-                        className="link-underline wrap-coin"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div className="item-partner">
-                          <img
-                            className="icon-partner"
-                            src={Icon4}
-                            alt="symbol"
-                          />
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      className="rfm-child"
-                      style={{ "--transform": "none" }}
-                    >
-                      <a
-                        href="https://app.navigator.exchange/#/trade?symbol=BNB/USD"
-                        className="link-underline wrap-coin"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div className="item-partner">
-                          <img
-                            className="icon-partner"
-                            src={Icon5}
-                            alt="symbol"
-                          />
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      className="rfm-child"
-                      style={{ "--transform": "none" }}
-                    >
-                      <a
-                        href="https://app.navigator.exchange/#/trade?symbol=BNB/USD"
-                        className="link-underline wrap-coin"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div className="item-partner">
-                          <img
-                            className="icon-partner"
-                            src={Icon5}
-                            alt="symbol"
-                          />
-                        </div>
-                      </a>
-                    </div>
+                        <a
+                          href={item.href}
+                          className="link-underline wrap-coin"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <div className="item-partner">
+                            <img
+                              className="icon-partner"
+                              src={item.src}
+                              alt={item.alt}
+                            />
+                          </div>
+                        </a>
+                      </div>
+                    ))}
                   </div>
                 </div>
                 <div className="rfm-marquee quick">
-                  <div className="rfm-child" style={{ "--transform": "none" }}>
-                    <a
-                      href="https://app.navigator.exchange/#/trade?symbol=ARB/USD"
-                      className="link-underline wrap-coin"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                  {partnerItems.map((item, index) => (
+                    <div
+                      className="rfm-child"
+                      style={{ "--transform": "none" }}
+                      key={index}
                     >
-                      <div className="item-partner">
-                        <img
-                          className="icon-partner"
-                          src={Icon8}
-                          alt="symbol"
-                        />
-                      </div>
-                    </a>
-                  </div>
-                  <div className="rfm-child" style={{ "--transform": "none" }}>
-                    <a
-                      href="https://app.navigator.exchange/#/trade?symbol=ORDI/USD"
-                      className="link-underline wrap-coin"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="item-partner">
-                        <img
-                          className="icon-partner"
-                          src={Icon9}
-                          alt="symbol"
-                        />
-                      </div>
-                    </a>
-                  </div>
-                  <div className="rfm-child" style={{ "--transform": "none" }}>
-                    <a
-                      href="https://app.navigator.exchange/#/trade?symbol=SUI/USD"
-                      className="link-underline wrap-coin"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="item-partner">
-                        <img
-                          className="icon-partner"
-                          src={Icon10}
-                          alt="symbol"
-                        />
-                      </div>
-                    </a>
-                  </div>
-                  <div className="rfm-child" style={{ "--transform": "none" }}>
-                    <a
-                      href="https://app.navigator.exchange/#/trade?symbol=PEPE/USD"
-                      className="link-underline wrap-coin"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="item-partner">
-                        <img
-                          className="icon-partner"
-                          src={Icon11}
-                          alt="symbol"
-                        />
-                      </div>
-                    </a>
-                  </div>
-                  <div className="rfm-child" style={{ "--transform": "none" }}>
-                    <a
-                      href="https://app.navigator.exchange/#/trade?symbol=S/USD"
-                      className="link-underline wrap-coin"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="item-partner">
-                        <img
-                          className="icon-partner"
-                          src={Icon12}
-                          alt="symbol"
-                        />
-                      </div>
-                    </a>
-                  </div>
-                  <div className="rfm-child" style={{ "--transform": "none" }}>
-                    <a
-                      href="https://app.navigator.exchange/#/trade?symbol=TRUMP/USD"
-                      className="link-underline wrap-coin"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="item-partner">
-                        <img
-                          className="icon-partner"
-                          src={Icon13}
-                          alt="symbol"
-                        />
-                      </div>
-                    </a>
-                  </div>
+                      <a
+                        href={item.href}
+                        className="link-underline wrap-coin"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <div className="item-partner">
+                          <img
+                            className="icon-partner"
+                            src={item.src}
+                            alt={item.alt}
+                          />
+                        </div>
+                      </a>
+                    </div>
+                  ))}
                 </div>
               </div>
               <div className="rfm-marquee-container">
                 <div className="rfm-marquee reverse quick">
                   <div className="rfm-initial-child-container">
-                    <div
-                      className="rfm-child"
-                      style={{ "--transform": "none" }}
-                    >
-                      <a
-                        href="https://app.navigator.exchange/#/trade?symbol=BTC/USD"
-                        className="link-underline wrap-coin"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    {partnerItems.map((item, index) => (
+                      <div
+                        className="rfm-child"
+                        style={{ "--transform": "none" }}
+                        key={index}
                       >
-                        <div className="item-partner">
-                          <img
-                            className="icon-partner"
-                            src={Icon1}
-                            alt="symbol"
-                          />
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      className="rfm-child"
-                      style={{ "--transform": "none" }}
-                    >
-                      <a
-                        href="https://app.navigator.exchange/#/trade?symbol=ETH/USD"
-                        className="link-underline wrap-coin"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div className="item-partner">
-                          <img
-                            className="icon-partner"
-                            src={Icon2}
-                            alt="symbol"
-                          />
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      className="rfm-child"
-                      style={{ "--transform": "none" }}
-                    >
-                      <a
-                        href="https://app.navigator.exchange/#/trade?symbol=LINK/USD"
-                        className="link-underline wrap-coin"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div className="item-partner">
-                          <img
-                            className="icon-partner"
-                            src={Icon3}
-                            alt="symbol"
-                          />
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      className="rfm-child"
-                      style={{ "--transform": "none" }}
-                    >
-                      <a
-                        href="https://app.navigator.exchange/#/trade?symbol=XRP/USD"
-                        className="link-underline wrap-coin"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div className="item-partner">
-                          <img
-                            className="icon-partner"
-                            src={Icon4}
-                            alt="symbol"
-                          />
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      className="rfm-child"
-                      style={{ "--transform": "none" }}
-                    >
-                      <a
-                        href="https://app.navigator.exchange/#/trade?symbol=BNB/USD"
-                        className="link-underline wrap-coin"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div className="item-partner">
-                          <img
-                            className="icon-partner"
-                            src={Icon5}
-                            alt="symbol"
-                          />
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      className="rfm-child"
-                      style={{ "--transform": "none" }}
-                    >
-                      <a
-                        href="https://app.navigator.exchange/#/trade?symbol=BNB/USD"
-                        className="link-underline wrap-coin"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div className="item-partner">
-                          <img
-                            className="icon-partner"
-                            src={Icon5}
-                            alt="symbol"
-                          />
-                        </div>
-                      </a>
-                    </div>
+                        <a
+                          href={item.href}
+                          className="link-underline wrap-coin"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <div className="item-partner">
+                            <img
+                              className="icon-partner"
+                              src={item.src}
+                              alt={item.alt}
+                            />
+                          </div>
+                        </a>
+                      </div>
+                    ))}
                   </div>
                 </div>
                 <div className="rfm-marquee reverse quick">
-                  <div className="rfm-child" style={{ "--transform": "none" }}>
-                    <a
-                      href="https://app.navigator.exchange/#/trade?symbol=ARB/USD"
-                      className="link-underline wrap-coin"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                  {partnerItems.map((item, index) => (
+                    <div
+                      className="rfm-child"
+                      style={{ "--transform": "none" }}
+                      key={index}
                     >
-                      <div className="item-partner">
-                        <img
-                          className="icon-partner"
-                          src={Icon8}
-                          alt="symbol"
-                        />
-                      </div>
-                    </a>
-                  </div>
-                  <div className="rfm-child" style={{ "--transform": "none" }}>
-                    <a
-                      href="https://app.navigator.exchange/#/trade?symbol=ORDI/USD"
-                      className="link-underline wrap-coin"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="item-partner">
-                        <img
-                          className="icon-partner"
-                          src={Icon9}
-                          alt="symbol"
-                        />
-                      </div>
-                    </a>
-                  </div>
-                  <div className="rfm-child" style={{ "--transform": "none" }}>
-                    <a
-                      href="https://app.navigator.exchange/#/trade?symbol=SUI/USD"
-                      className="link-underline wrap-coin"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="item-partner">
-                        <img
-                          className="icon-partner"
-                          src={Icon10}
-                          alt="symbol"
-                        />
-                      </div>
-                    </a>
-                  </div>
-                  <div className="rfm-child" style={{ "--transform": "none" }}>
-                    <a
-                      href="https://app.navigator.exchange/#/trade?symbol=PEPE/USD"
-                      className="link-underline wrap-coin"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="item-partner">
-                        <img
-                          className="icon-partner"
-                          src={Icon11}
-                          alt="symbol"
-                        />
-                      </div>
-                    </a>
-                  </div>
-                  <div className="rfm-child" style={{ "--transform": "none" }}>
-                    <a
-                      href="https://app.navigator.exchange/#/trade?symbol=S/USD"
-                      className="link-underline wrap-coin"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="item-partner">
-                        <img
-                          className="icon-partner"
-                          src={Icon12}
-                          alt="symbol"
-                        />
-                      </div>
-                    </a>
-                  </div>
-                  <div className="rfm-child" style={{ "--transform": "none" }}>
-                    <a
-                      href="https://app.navigator.exchange/#/trade?symbol=TRUMP/USD"
-                      className="link-underline wrap-coin"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="item-partner">
-                        <img
-                          className="icon-partner"
-                          src={Icon13}
-                          alt="symbol"
-                        />
-                      </div>
-                    </a>
-                  </div>
+                      <a
+                        href={item.href}
+                        className="link-underline wrap-coin"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <div className="item-partner">
+                          <img
+                            className="icon-partner"
+                            src={item.src}
+                            alt={item.alt}
+                          />
+                        </div>
+                      </a>
+                    </div>
+                  ))}
                 </div>
               </div>
               <div className="rfm-marquee-container">
                 <div className="rfm-marquee quick">
                   <div className="rfm-initial-child-container">
-                    <div
-                      className="rfm-child"
-                      style={{ "--transform": "none" }}
-                    >
-                      <a
-                        href="https://app.navigator.exchange/#/trade?symbol=BTC/USD"
-                        className="link-underline wrap-coin"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    {partnerItems.map((item, index) => (
+                      <div
+                        className="rfm-child"
+                        style={{ "--transform": "none" }}
+                        key={index}
                       >
-                        <div className="item-partner">
-                          <img
-                            className="icon-partner"
-                            src={Icon1}
-                            alt="symbol"
-                          />
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      className="rfm-child"
-                      style={{ "--transform": "none" }}
-                    >
-                      <a
-                        href="https://app.navigator.exchange/#/trade?symbol=ETH/USD"
-                        className="link-underline wrap-coin"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div className="item-partner">
-                          <img
-                            className="icon-partner"
-                            src={Icon2}
-                            alt="symbol"
-                          />
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      className="rfm-child"
-                      style={{ "--transform": "none" }}
-                    >
-                      <a
-                        href="https://app.navigator.exchange/#/trade?symbol=LINK/USD"
-                        className="link-underline wrap-coin"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div className="item-partner">
-                          <img
-                            className="icon-partner"
-                            src={Icon3}
-                            alt="symbol"
-                          />
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      className="rfm-child"
-                      style={{ "--transform": "none" }}
-                    >
-                      <a
-                        href="https://app.navigator.exchange/#/trade?symbol=XRP/USD"
-                        className="link-underline wrap-coin"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div className="item-partner">
-                          <img
-                            className="icon-partner"
-                            src={Icon4}
-                            alt="symbol"
-                          />
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      className="rfm-child"
-                      style={{ "--transform": "none" }}
-                    >
-                      <a
-                        href="https://app.navigator.exchange/#/trade?symbol=BNB/USD"
-                        className="link-underline wrap-coin"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div className="item-partner">
-                          <img
-                            className="icon-partner"
-                            src={Icon5}
-                            alt="symbol"
-                          />
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      className="rfm-child"
-                      style={{ "--transform": "none" }}
-                    >
-                      <a
-                        href="https://app.navigator.exchange/#/trade?symbol=BNB/USD"
-                        className="link-underline wrap-coin"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div className="item-partner">
-                          <img
-                            className="icon-partner"
-                            src={Icon5}
-                            alt="symbol"
-                          />
-                        </div>
-                      </a>
-                    </div>
+                        <a
+                          href={item.href}
+                          className="link-underline wrap-coin"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <div className="item-partner">
+                            <img
+                              className="icon-partner"
+                              src={item.src}
+                              alt={item.alt}
+                            />
+                          </div>
+                        </a>
+                      </div>
+                    ))}
                   </div>
                 </div>
                 <div className="rfm-marquee quick">
-                  <div className="rfm-child" style={{ "--transform": "none" }}>
-                    <a
-                      href="https://app.navigator.exchange/#/trade?symbol=ARB/USD"
-                      className="link-underline wrap-coin"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                  {partnerItems.map((item, index) => (
+                    <div
+                      className="rfm-child"
+                      style={{ "--transform": "none" }}
+                      key={index}
                     >
-                      <div className="item-partner">
-                        <img
-                          className="icon-partner"
-                          src={Icon8}
-                          alt="symbol"
-                        />
-                      </div>
-                    </a>
-                  </div>
-                  <div className="rfm-child" style={{ "--transform": "none" }}>
-                    <a
-                      href="https://app.navigator.exchange/#/trade?symbol=ORDI/USD"
-                      className="link-underline wrap-coin"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="item-partner">
-                        <img
-                          className="icon-partner"
-                          src={Icon9}
-                          alt="symbol"
-                        />
-                      </div>
-                    </a>
-                  </div>
-                  <div className="rfm-child" style={{ "--transform": "none" }}>
-                    <a
-                      href="https://app.navigator.exchange/#/trade?symbol=SUI/USD"
-                      className="link-underline wrap-coin"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="item-partner">
-                        <img
-                          className="icon-partner"
-                          src={Icon10}
-                          alt="symbol"
-                        />
-                      </div>
-                    </a>
-                  </div>
-                  <div className="rfm-child" style={{ "--transform": "none" }}>
-                    <a
-                      href="https://app.navigator.exchange/#/trade?symbol=PEPE/USD"
-                      className="link-underline wrap-coin"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="item-partner">
-                        <img
-                          className="icon-partner"
-                          src={Icon11}
-                          alt="symbol"
-                        />
-                      </div>
-                    </a>
-                  </div>
-                  <div className="rfm-child" style={{ "--transform": "none" }}>
-                    <a
-                      href="https://app.navigator.exchange/#/trade?symbol=S/USD"
-                      className="link-underline wrap-coin"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="item-partner">
-                        <img
-                          className="icon-partner"
-                          src={Icon12}
-                          alt="symbol"
-                        />
-                      </div>
-                    </a>
-                  </div>
-                  <div className="rfm-child" style={{ "--transform": "none" }}>
-                    <a
-                      href="https://app.navigator.exchange/#/trade?symbol=TRUMP/USD"
-                      className="link-underline wrap-coin"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="item-partner">
-                        <img
-                          className="icon-partner"
-                          src={Icon13}
-                          alt="symbol"
-                        />
-                      </div>
-                    </a>
-                  </div>
+                      <a
+                        href={item.href}
+                        className="link-underline wrap-coin"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <div className="item-partner">
+                          <img
+                            className="icon-partner"
+                            src={item.src}
+                            alt={item.alt}
+                          />
+                        </div>
+                      </a>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -751,7 +310,8 @@ const Contact = () => {
         <div className="container footer-container">
           <div className="info-footer">
             <div style={{ cursor: "pointer" }}>
-              <svg className="logo-footer"
+              <svg
+                className="logo-footer"
                 width="170"
                 height="36"
                 viewBox="0 0 170 36"

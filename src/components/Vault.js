@@ -11,6 +11,46 @@ import "./Vault.css";
 import { formatFloatNumber } from "../utils/format";
 
 const Vault = () => {
+  const vaultItems = [
+    {
+      imgSrc: Vault5,
+      alt: "vault5",
+      name: "NAVI",
+      apy: formatFloatNumber(78.65555),
+      daily: formatFloatNumber(0.7),
+      link: "https://app.navigator.exchange/#/vault",
+      buttonText: "Earn Now",
+      buttonDisabled: false,
+    },
+    {
+      imgSrc: Vault6,
+      alt: "vault6",
+      name: "NLP",
+      apy: formatFloatNumber(341.132132),
+      daily: formatFloatNumber(0.5212321),
+      link: "https://app.navigator.exchange/#/vault",
+      buttonText: "Earn Now",
+      buttonDisabled: false,
+    },
+    {
+      imgSrc: Vault7,
+      alt: "vault7",
+      name: "NAVI",
+      apy: "--",
+      daily: "--",
+      buttonText: "Coming Soon",
+      buttonDisabled: true,
+    },
+    {
+      imgSrc: Vault8,
+      alt: "vault8",
+      name: "NAVI",
+      apy: "--",
+      daily: "--",
+      buttonText: "Coming Soon",
+      buttonDisabled: true,
+    },
+  ];
   const titleRef = useRef(null);
   const descRef = useRef(null);
   const containerRef = useRef(null);
@@ -100,118 +140,49 @@ const Vault = () => {
           </div>
         </div>
         <div className="right-vault" ref={containerRef}>
-          <div
-            className="box-item-vault"
-            ref={(el) => (itemRefs.current[0] = el)}
-          >
-            <div className="item-left">
-              <div>
-                <img className="img-coin" src={Vault5} alt="vault5"></img>
-              </div>
-              <div className="wrap-value-vault">
-                <div className="name-coin">NAVI</div>
-                <div className="boxes">
-                  <div className="box-value-vault">
-                    <div className="sub-title">APY</div>
-                    {formatFloatNumber(78.65555)}%
-                  </div>
-                  <div className="box-value-vault">
-                    <div className="sub-title">Daily</div>
-                    {formatFloatNumber(0.7)}%
-                  </div>
-                </div>
-              </div>
-            </div>
-            <a
-              href="https://app.navigator.exchange/#/vault"
-              className="border-btn btn-earn"
-              rel="noreferrer"
+          {vaultItems.map((item, index) => (
+            <div
+              className="box-item-vault"
+              ref={(el) => (itemRefs.current[index] = el)}
+              key={index}
             >
-              Earn Now
-            </a>
-          </div>
-          <div
-            className="box-item-vault"
-            ref={(el) => (itemRefs.current[1] = el)}
-          >
-            <div className="item-left">
-              <div>
-                <img className="img-coin" src={Vault6} alt="vault6"></img>
-              </div>
-              <div className="wrap-value-vault">
-                <div className="name-coin">NLP</div>
-                <div className="boxes">
-                  <div className="box-value-vault">
-                    <div className="sub-title">APY</div>
-                    {formatFloatNumber(341.132132)}%
-                  </div>
-                  <div className="box-value-vault">
-                    <div className="sub-title">Daily</div>
-                    {formatFloatNumber(0.5212321)}%
+              <div className="item-left">
+                <div>
+                  <img
+                    className="img-coin"
+                    src={item.imgSrc}
+                    alt={item.alt}
+                  ></img>
+                </div>
+                <div className="wrap-value-vault">
+                  <div className="name-coin">{item.name}</div>
+                  <div className="boxes">
+                    <div className="box-value-vault">
+                      <div className="sub-title">APY</div>
+                      {item.apy}%
+                    </div>
+                    <div className="box-value-vault">
+                      <div className="sub-title">Daily</div>
+                      {item.daily}%
+                    </div>
                   </div>
                 </div>
               </div>
+              {item.buttonDisabled ? (
+                <button disabled className="border-btn btn-earn">
+                  {item.buttonText}
+                </button>
+              ) : (
+                <a
+                  href={item.link}
+                  className="border-btn btn-earn"
+                  rel="noreferrer"
+                >
+                  {item.buttonText}
+                </a>
+              )}
             </div>
-            <a
-              href="https://app.navigator.exchange/#/vault"
-              className="border-btn btn-earn"
-              rel="noreferrer"
-            >
-              Earn Now
-            </a>
-          </div>
-          <div
-            className="box-item-vault"
-            ref={(el) => (itemRefs.current[2] = el)}
-          >
-            <div className="item-left">
-              <div>
-                <img className="img-coin" src={Vault7} alt="vault7"></img>
-              </div>
-              <div className="wrap-value-vault">
-                <div className="name-coin">NAVI</div>
-                <div className="boxes">
-                  <div className="box-value-vault">
-                    <div className="sub-title">APY</div>
-                    --%
-                  </div>
-                  <div className="box-value-vault">
-                    <div className="sub-title">Daily</div>
-                    --%
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button disabled className="border-btn btn-earn">
-              Coming Soon
-            </button>
-          </div>
-          <div
-            className="box-item-vault"
-            ref={(el) => (itemRefs.current[3] = el)}
-          >
-            <div className="item-left">
-              <div>
-                <img className="img-coin" src={Vault8} alt="vault8"></img>
-              </div>
-              <div className="wrap-value-vault">
-                <div className="name-coin">NAVI</div>
-                <div className="boxes">
-                  <div className="box-value-vault">
-                    <div className="sub-title">APY</div>
-                    --%
-                  </div>
-                  <div className="box-value-vault">
-                    <div className="sub-title">Daily</div>
-                    --%
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button disabled className="border-btn btn-earn">
-              Coming Soon
-            </button>
-          </div>
+          ))}
         </div>
       </div>
     </div>
