@@ -342,7 +342,7 @@ const Landing = () => {
                 <div className="App-header-container-right">
                   <div className="App-header-user">
                     <div className="App-header-trade-link homepage-header">
-                      <NavLink class="default-btn" href="/">
+                      <NavLink className="default-btn" href="/">
                         <span>Launch App</span>
                       </NavLink>
                     </div>

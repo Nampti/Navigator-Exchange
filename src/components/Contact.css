@@ -271,10 +271,16 @@
     flex-direction: column;
     gap: 20px;
   }
+  .info-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   .logo-footer {
-    width: 100% !important;
-    height: 100% !important;
+    width: 170px !important;
+    height: 36px !important;
   }
 }
 
@@ -305,7 +311,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
   }
 
   .right-foot {
