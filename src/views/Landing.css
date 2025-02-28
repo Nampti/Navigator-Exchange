@@ -487,6 +487,11 @@
     padding: 0 !important;
   }
 }
+.show-down-item-container {
+  &.active {
+    border-left: 2px solid #90fb75;
+  }
+}
 .show-down-item {
   height: auto !important;
   padding: unset !important;

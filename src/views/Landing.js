@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "./Landing.css";
 import Banner from "../components/Banner";
 import Info from "../components/Info";
@@ -16,6 +17,7 @@ import MenuItem5 from "../assets/icon/menuitem5.svg";
 const Landing = () => {
   const [menuActive, setMenuActive] = useState(false);
   const [miniMenuActive, setMiniMenuActive] = useState(false);
+  const location = useLocation();
   const toggleMenu = () => {
     setMenuActive(!menuActive);
   };
@@ -163,7 +165,7 @@ const Landing = () => {
                         </svg>
                         <div className="show-dropdown">
                           <div className="show-dropdown-menu">
-                            <a className="menu-item-container" href="#/earn">
+                            <a className="menu-item-container" href="/">
                               <div class="menu-item">
                                 <img src={MenuItem1} alt="" />
                                 <div class="wrap">
@@ -172,7 +174,7 @@ const Landing = () => {
                                 </div>
                               </div>{" "}
                             </a>
-                            <a className="menu-item-container" href="#/earn">
+                            <a className="menu-item-container" href="/">
                               <div class="menu-item">
                                 <img src={MenuItem2} alt="" />
                                 <div class="wrap">
@@ -183,7 +185,7 @@ const Landing = () => {
                                 </div>
                               </div>{" "}
                             </a>
-                            <a className="menu-item-container" href="#/earn">
+                            <a className="menu-item-container" href="/">
                               <div class="menu-item">
                                 <img src={MenuItem3} alt="" />
                                 <div class="wrap">
@@ -194,7 +196,7 @@ const Landing = () => {
                                 </div>
                               </div>{" "}
                             </a>
-                            <a className="menu-item-container" href="#/earn">
+                            <a className="menu-item-container" href="/">
                               <div class="menu-item">
                                 <img src={MenuItem4} alt="" />
                                 <div class="wrap">
@@ -205,7 +207,7 @@ const Landing = () => {
                                 </div>
                               </div>{" "}
                             </a>
-                            <a className="menu-item-container" href="#/earn">
+                            <a className="menu-item-container" href="/">
                               <div class="menu-item">
                                 <img src={MenuItem5} alt="" />
                                 <div class="wrap">
@@ -438,8 +440,12 @@ const Landing = () => {
                 <div
                   className={`App-show-down ${miniMenuActive ? "active" : ""}`}
                 >
-                  <div className="show-down-item-container">
-                    <a className="show-down-item" href="#/earn">
+                  <div
+                    className={`show-down-item-container ${
+                      location.pathname === "/" ? "active" : ""
+                    }`}
+                  >
+                    <a className="show-down-item" href="/">
                       <img src={MenuItem1} alt="" />
                       <div class="show-down-wrap">
                         <span>Overview</span>
@@ -447,8 +453,12 @@ const Landing = () => {
                       </div>
                     </a>
                   </div>
-                  <div className="show-down-item-container">
-                    <a className="show-down-item" href="#/earn">
+                  <div
+                    className={`show-down-item-container ${
+                      location.pathname === "/a" ? "active" : ""
+                    }`}
+                  >
+                    <a className="show-down-item" href="/">
                       <img src={MenuItem2} alt="" />
                       <div class="show-down-wrap">
                         <span>Stake NAVI & esNAVI</span>
@@ -458,8 +468,12 @@ const Landing = () => {
                       </div>
                     </a>
                   </div>
-                  <div className="show-down-item-container">
-                    <a className="show-down-item" href="#/earn">
+                  <div
+                    className={`show-down-item-container ${
+                      location.pathname === "/b" ? "active" : ""
+                    }`}
+                  >
+                    <a className="show-down-item" href="/">
                       <img src={MenuItem3} alt="" />
                       <div class="show-down-wrap">
                         <span>Crypto Pool - NLP</span>
@@ -467,8 +481,12 @@ const Landing = () => {
                       </div>
                     </a>
                   </div>
-                  <div className="show-down-item-container">
-                    <a className="show-down-item" href="#/earn">
+                  <div
+                    className={`show-down-item-container ${
+                      location.pathname === "/c" ? "active" : ""
+                    }`}
+                  >
+                    <a className="show-down-item" href="/">
                       <img src={MenuItem4} alt="" />
                       <div class="show-down-wrap">
                         <span>Stable Pool - NSLP</span>
@@ -476,8 +494,12 @@ const Landing = () => {
                       </div>
                     </a>
                   </div>
-                  <div className="show-down-item-container">
-                    <a className="show-down-item" href="#/earn">
+                  <div
+                    className={`show-down-item-container ${
+                      location.pathname === "/d" ? "active" : ""
+                    }`}
+                  >
+                    <a className="show-down-item" href="/">
                       <img src={MenuItem5} alt="" />
                       <div class="show-down-wrap">
                         <span>Vest</span>
