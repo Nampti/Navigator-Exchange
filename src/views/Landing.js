@@ -12,6 +12,12 @@ import Contact from "../components/Contact";
 const Landing = () => {
   return (
     <>
+      <video className="videoTag" autoPlay playsInline loop muted>
+        <source
+          src="https://cdn.mummy.finance/bg_videoMMY.mp4"
+          type="video/mp4"
+        />
+      </video>
       <Banner />
       <Info />
       <Vault />

@@ -16,7 +16,6 @@
 }
 
 .banner-wrap {
-  padding-top: 214px;
   position: relative;
 }
 
@@ -526,10 +525,6 @@
 
 /* Responsive */
 @media screen and (max-width: 768px) {
-  .banner-wrap {
-    padding-top: 170px;
-  }
-
   .title-banner {
     width: inherit !important;
     padding: 24px !important;

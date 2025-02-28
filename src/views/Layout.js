@@ -6,7 +6,6 @@ import "./Layout.css";
 const Layout = () => {
   return (
     <div className="App">
-      <video className="videoTag" autoPlay playsInline loop muted></video>
       <div className="App-content">
         <Header />
         <div className="Wrapper">
