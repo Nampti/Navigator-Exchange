@@ -1,0 +1,73 @@
+.App {
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.videoTag {
+  filter: brightness(60%) blur(4px);
+  left: 0;
+  mask-image: linear-gradient(180deg, #000 70%, #0000);
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  object-fit: cover;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  max-height: 770px;
+  z-index: 1;
+}
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    gap: 80px !important;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 24px;
+  max-width: 1348px;
+
+  @media screen and (max-width: 1200px) {
+    max-width: 1140px;
+    padding: 0;
+  }
+
+  @media screen and (max-width: 1024px) {
+    max-width: 95%;
+    padding: 0;
+  }
+
+  @media screen and (max-width: 992px) {
+    max-width: 95%;
+    padding: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 90%;
+    padding: 0;
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+}
+
+.wrapper > :not(:first-child) {
+  margin-left: -2px;
+}
+
+.link-underline {
+  color: #90fb75;
+  cursor: pointer;
+  display: inline-flex;
+  text-decoration: underline;
+}
