@@ -116,7 +116,7 @@ const Landing = () => {
                 <div className="App-header-links">
                   <div className="App-header-links-item">
                     <a
-                      href="https://app.navigator.exchange/#/dashboard"
+                      href="/"
                       className="link-underline"
                       target="_self"
                       rel="noopener noreferrer"
@@ -126,7 +126,7 @@ const Landing = () => {
                   </div>
                   <div className="App-header-links-item">
                     <a
-                      href="https://docs.navigator.exchange/"
+                      href="/"
                       className="link-underline"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -136,7 +136,7 @@ const Landing = () => {
                   </div>
                   <div className="App-header-links-item">
                     <a
-                      href="https://docs.navigator.exchange/"
+                      href="/"
                       className="link-underline"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -225,7 +225,7 @@ const Landing = () => {
                   </div>
                   <div className="App-header-links-item">
                     <a
-                      href="https://docs.navigator.exchange/"
+                      href="/"
                       className="link-underline"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -235,7 +235,7 @@ const Landing = () => {
                   </div>
                   <div className="App-header-links-item">
                     <a
-                      href="https://docs.navigator.exchange/"
+                      href="/"
                       className="link-underline"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -245,7 +245,7 @@ const Landing = () => {
                   </div>
                   <div className="App-header-links-item">
                     <a
-                      href="https://docs.navigator.exchange/"
+                      href="/"
                       className="link-underline"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -255,7 +255,7 @@ const Landing = () => {
                   </div>
                   <div className="App-header-links-item">
                     <a
-                      href="https://docs.navigator.exchange/"
+                      href="/"
                       className="link-underline"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -265,7 +265,7 @@ const Landing = () => {
                   </div>
                   <div className="App-header-links-item">
                     <a
-                      href="https://docs.navigator.exchange/"
+                      href="/"
                       className="link-underline item-special"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -276,7 +276,7 @@ const Landing = () => {
                   </div>
                   <div className="App-header-links-item">
                     <a
-                      href="https://docs.navigator.exchange/"
+                      href="/"
                       className="link-underline"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -286,7 +286,7 @@ const Landing = () => {
                   </div>
                   <div className="App-header-links-item">
                     <a
-                      href="https://docs.navigator.exchange/"
+                      href="/"
                       className="link-underline"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -339,10 +339,7 @@ const Landing = () => {
                 <div className="App-header-container-right">
                   <div className="App-header-user">
                     <div className="App-header-trade-link homepage-header">
-                      <a
-                        class="default-btn"
-                        href="https://app.navigator.exchange/#/trade"
-                      >
+                      <a class="default-btn" href="/">
                         <span>Launch App</span>
                       </a>
                     </div>
@@ -384,7 +381,7 @@ const Landing = () => {
               </div>
               <div className="App-header-links-item menu">
                 <a
-                  href="https://app.navigator.exchange/#/dashboard"
+                  href="/"
                   className="link-underline menu-btn"
                   target="_self"
                   rel="noopener noreferrer"
@@ -394,9 +391,9 @@ const Landing = () => {
               </div>
               <div className="App-header-links-item menu">
                 <a
-                  href="https://docs.navigator.exchange/"
+                  href="/"
                   className="link-underline menu-btn"
-                  target="_blank"
+                  target="_self"
                   rel="noopener noreferrer"
                 >
                   Perp
@@ -404,7 +401,7 @@ const Landing = () => {
               </div>
               <div className="App-header-links-item menu">
                 <a
-                  href="https://docs.navigator.exchange/"
+                  href="/"
                   className="link-underline menu-btn"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -458,7 +455,7 @@ const Landing = () => {
                       location.pathname === "/a" ? "active" : ""
                     }`}
                   >
-                    <a className="show-down-item" href="/">
+                    <a className="show-down-item" href="/stake">
                       <img src={MenuItem2} alt="" />
                       <div class="show-down-wrap">
                         <span>Stake NAVI & esNAVI</span>
@@ -513,7 +510,7 @@ const Landing = () => {
               </div>
               <div className="App-header-links-item menu">
                 <a
-                  href="https://docs.navigator.exchange/"
+                  href="/"
                   className="link-underline menu-btn"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -523,7 +520,7 @@ const Landing = () => {
               </div>
               <div className="App-header-links-item menu">
                 <a
-                  href="https://docs.navigator.exchange/"
+                  href="/"
                   className="link-underline menu-btn"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -533,7 +530,7 @@ const Landing = () => {
               </div>
               <div className="App-header-links-item menu">
                 <a
-                  href="https://docs.navigator.exchange/"
+                  href="/"
                   className="link-underline menu-btn"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -543,7 +540,7 @@ const Landing = () => {
               </div>
               <div className="App-header-links-item menu">
                 <a
-                  href="https://docs.navigator.exchange/"
+                  href="/"
                   className="link-underline menu-btn"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -553,7 +550,7 @@ const Landing = () => {
               </div>
               <div className="App-header-links-item menu">
                 <a
-                  href="https://docs.navigator.exchange/"
+                  href="/"
                   className="link-underline item-menu-special"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -564,7 +561,7 @@ const Landing = () => {
               </div>
               <div className="App-header-links-item menu">
                 <a
-                  href="https://docs.navigator.exchange/"
+                  href="/"
                   className="link-underline menu-btn"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -574,7 +571,7 @@ const Landing = () => {
               </div>
               <div className="App-header-links-item menu">
                 <a
-                  href="https://docs.navigator.exchange/"
+                  href="/"
                   className="link-underline menu-btn"
                   target="_blank"
                   rel="noopener noreferrer"
