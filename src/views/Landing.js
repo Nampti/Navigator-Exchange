@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Landing.css";
 import Banner from "../components/Banner";
 import Info from "../components/Info";
@@ -115,34 +116,34 @@ const Landing = () => {
                 </div>
                 <div className="App-header-links">
                   <div className="App-header-links-item">
-                    <a
+                    <NavLink
                       href="/"
                       className="link-underline"
                       target="_self"
                       rel="noopener noreferrer"
                     >
                       Dashboard
-                    </a>
+                    </NavLink>
                   </div>
                   <div className="App-header-links-item">
-                    <a
+                    <NavLink
                       href="/"
                       className="link-underline"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       Perp
-                    </a>
+                    </NavLink>
                   </div>
                   <div className="App-header-links-item">
-                    <a
+                    <NavLink
                       href="/"
                       className="link-underline"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       Swap
-                    </a>
+                    </NavLink>
                   </div>
                   <div className="App-header-links-item dropdown">
                     <div className="App-header-dropdown">
@@ -165,106 +166,108 @@ const Landing = () => {
                         </svg>
                         <div className="show-dropdown">
                           <div className="show-dropdown-menu">
-                            <a className="menu-item-container" href="/">
-                              <div class="menu-item">
+                            <NavLink className="menu-item-container" to="/">
+                              <div className="menu-item">
                                 <img src={MenuItem1} alt="" />
-                                <div class="wrap">
+                                <div className="wrap">
                                   <span>Overview</span>
-                                  <span class="desc">Manage your earning</span>
+                                  <span className="desc">
+                                    Manage your earning
+                                  </span>
                                 </div>
-                              </div>{" "}
-                            </a>
-                            <a className="menu-item-container" href="/">
-                              <div class="menu-item">
+                              </div>
+                            </NavLink>
+                            <NavLink className="menu-item-container" to="/">
+                              <div className="menu-item">
                                 <img src={MenuItem2} alt="" />
-                                <div class="wrap">
+                                <div className="wrap">
                                   <span>Stake NAVI & esNAVI</span>
-                                  <span class="desc">
+                                  <span className="desc">
                                     Stake Navigator governance token
                                   </span>
                                 </div>
-                              </div>{" "}
-                            </a>
-                            <a className="menu-item-container" href="/">
-                              <div class="menu-item">
+                              </div>
+                            </NavLink>
+                            <NavLink className="menu-item-container" to="/">
+                              <div className="menu-item">
                                 <img src={MenuItem3} alt="" />
-                                <div class="wrap">
+                                <div className="wrap">
                                   <span>Crypto Pool - NLP</span>
-                                  <span class="desc">
+                                  <span className="desc">
                                     Index by crypto asset
                                   </span>
                                 </div>
-                              </div>{" "}
-                            </a>
-                            <a className="menu-item-container" href="/">
-                              <div class="menu-item">
+                              </div>
+                            </NavLink>
+                            <NavLink className="menu-item-container" to="/">
+                              <div className="menu-item">
                                 <img src={MenuItem4} alt="" />
-                                <div class="wrap">
+                                <div className="wrap">
                                   <span>Stable Pool - NSLP</span>
-                                  <span class="desc">
+                                  <span className="desc">
                                     Index by stable asset
                                   </span>
                                 </div>
-                              </div>{" "}
-                            </a>
-                            <a className="menu-item-container" href="/">
-                              <div class="menu-item">
+                              </div>
+                            </NavLink>
+                            <NavLink className="menu-item-container" to="/">
+                              <div className="menu-item">
                                 <img src={MenuItem5} alt="" />
-                                <div class="wrap">
+                                <div className="wrap">
                                   <span>Vest</span>
-                                  <span class="desc">
+                                  <span className="desc">
                                     Convert esNAVI tokens to NAVI tokens
                                   </span>
                                 </div>
-                              </div>{" "}
-                            </a>
+                              </div>
+                            </NavLink>
                           </div>
                         </div>
                       </span>
                     </div>
                   </div>
                   <div className="App-header-links-item">
-                    <a
+                    <NavLink
                       href="/"
                       className="link-underline"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       Vaults
-                    </a>
+                    </NavLink>
                   </div>
                   <div className="App-header-links-item">
-                    <a
+                    <NavLink
                       href="/"
                       className="link-underline"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       Buy
-                    </a>
+                    </NavLink>
                   </div>
                   <div className="App-header-links-item">
-                    <a
+                    <NavLink
                       href="/"
                       className="link-underline"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       Referrals
-                    </a>
+                    </NavLink>
                   </div>
                   <div className="App-header-links-item">
-                    <a
+                    <NavLink
                       href="/"
                       className="link-underline"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       Portfolio
-                    </a>
+                    </NavLink>
                   </div>
                   <div className="App-header-links-item">
-                    <a
+                    <NavLink
                       href="/"
                       className="link-underline item-special"
                       target="_blank"
@@ -272,39 +275,39 @@ const Landing = () => {
                     >
                       Analytics
                       <span className="special">Contest</span>
-                    </a>
+                    </NavLink>
                   </div>
                   <div className="App-header-links-item">
-                    <a
+                    <NavLink
                       href="/"
                       className="link-underline"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       NFTs
-                    </a>
+                    </NavLink>
                   </div>
                   <div className="App-header-links-item">
-                    <a
+                    <NavLink
                       href="/"
                       className="link-underline"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       Migrate
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               </div>
               <div className="App-header-container-right">
                 <div className="App-header-user">
                   <div className="App-header-trade-link">
-                    <a
+                    <NavLink
                       className="default-btn"
                       href="https://app.navigator.exchange/#/trade"
                     >
                       <span>Launch App</span>
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               </div>
@@ -339,9 +342,9 @@ const Landing = () => {
                 <div className="App-header-container-right">
                   <div className="App-header-user">
                     <div className="App-header-trade-link homepage-header">
-                      <a class="default-btn" href="/">
+                      <NavLink class="default-btn" href="/">
                         <span>Launch App</span>
-                      </a>
+                      </NavLink>
                     </div>
                   </div>
                 </div>
@@ -355,9 +358,9 @@ const Landing = () => {
           >
             <div className="App-header-links menu">
               <div className="App-header-links-header">
-                <a className="App-header-link-main" href="#/">
+                <NavLink className="App-header-link-main" href="#/">
                   <img src={MenuLogo} className="small-logo" alt=""></img>
-                </a>
+                </NavLink>
                 <div
                   class="App-header-menu-icon-block mobile-cross-menu"
                   onClick={toggleMenu}
@@ -380,34 +383,34 @@ const Landing = () => {
                 </div>
               </div>
               <div className="App-header-links-item menu">
-                <a
+                <NavLink
                   href="/"
                   className="link-underline menu-btn"
                   target="_self"
                   rel="noopener noreferrer"
                 >
                   Dashboard
-                </a>
+                </NavLink>
               </div>
               <div className="App-header-links-item menu">
-                <a
+                <NavLink
                   href="/"
                   className="link-underline menu-btn"
                   target="_self"
                   rel="noopener noreferrer"
                 >
                   Perp
-                </a>
+                </NavLink>
               </div>
               <div className="App-header-links-item menu">
-                <a
+                <NavLink
                   href="/"
                   className="link-underline menu-btn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Swap
-                </a>
+                </NavLink>
               </div>
               <div
                 className={`App-header-links-item menu selected ${
@@ -442,20 +445,20 @@ const Landing = () => {
                       location.pathname === "/" ? "active" : ""
                     }`}
                   >
-                    <a className="show-down-item" href="/">
+                    <NavLink className="show-down-item" href="/">
                       <img src={MenuItem1} alt="" />
                       <div class="show-down-wrap">
                         <span>Overview</span>
                         <span class="desc">Manage your earning</span>
                       </div>
-                    </a>
+                    </NavLink>
                   </div>
                   <div
                     className={`show-down-item-container ${
                       location.pathname === "/a" ? "active" : ""
                     }`}
                   >
-                    <a className="show-down-item" href="/stake">
+                    <NavLink className="show-down-item" href="/stake">
                       <img src={MenuItem2} alt="" />
                       <div class="show-down-wrap">
                         <span>Stake NAVI & esNAVI</span>
@@ -463,40 +466,40 @@ const Landing = () => {
                           Stake Navigator governance token
                         </span>
                       </div>
-                    </a>
+                    </NavLink>
                   </div>
                   <div
                     className={`show-down-item-container ${
                       location.pathname === "/b" ? "active" : ""
                     }`}
                   >
-                    <a className="show-down-item" href="/">
+                    <NavLink className="show-down-item" href="/">
                       <img src={MenuItem3} alt="" />
                       <div class="show-down-wrap">
                         <span>Crypto Pool - NLP</span>
                         <span class="desc">Index by crypto asset</span>
                       </div>
-                    </a>
+                    </NavLink>
                   </div>
                   <div
                     className={`show-down-item-container ${
                       location.pathname === "/c" ? "active" : ""
                     }`}
                   >
-                    <a className="show-down-item" href="/">
+                    <NavLink className="show-down-item" href="/">
                       <img src={MenuItem4} alt="" />
                       <div class="show-down-wrap">
                         <span>Stable Pool - NSLP</span>
                         <span class="desc">Index by stable asset</span>
                       </div>
-                    </a>
+                    </NavLink>
                   </div>
                   <div
                     className={`show-down-item-container ${
                       location.pathname === "/d" ? "active" : ""
                     }`}
                   >
-                    <a className="show-down-item" href="/">
+                    <NavLink className="show-down-item" href="/">
                       <img src={MenuItem5} alt="" />
                       <div class="show-down-wrap">
                         <span>Vest</span>
@@ -504,52 +507,52 @@ const Landing = () => {
                           Convert esNAVI tokens to NAVI tokens
                         </span>
                       </div>
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               </div>
               <div className="App-header-links-item menu">
-                <a
+                <NavLink
                   href="/"
                   className="link-underline menu-btn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Vaults
-                </a>
+                </NavLink>
               </div>
               <div className="App-header-links-item menu">
-                <a
+                <NavLink
                   href="/"
                   className="link-underline menu-btn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Buy
-                </a>
+                </NavLink>
               </div>
               <div className="App-header-links-item menu">
-                <a
+                <NavLink
                   href="/"
                   className="link-underline menu-btn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Referrals
-                </a>
+                </NavLink>
               </div>
               <div className="App-header-links-item menu">
-                <a
+                <NavLink
                   href="/"
                   className="link-underline menu-btn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Portfolio
-                </a>
+                </NavLink>
               </div>
               <div className="App-header-links-item menu">
-                <a
+                <NavLink
                   href="/"
                   className="link-underline item-menu-special"
                   target="_blank"
@@ -557,27 +560,27 @@ const Landing = () => {
                 >
                   Analytics
                   <span className="special">Contest</span>
-                </a>
+                </NavLink>
               </div>
               <div className="App-header-links-item menu">
-                <a
+                <NavLink
                   href="/"
                   className="link-underline menu-btn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   NFTs
-                </a>
+                </NavLink>
               </div>
               <div className="App-header-links-item menu">
-                <a
+                <NavLink
                   href="/"
                   className="link-underline menu-btn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Migrate
-                </a>
+                </NavLink>
               </div>
             </div>
           </div>
@@ -599,14 +602,14 @@ const Landing = () => {
             <span>Prize: 5,000 USDC.e! 🚀</span>
           </span>
           <span className="details">
-            <a
+            <NavLink
               href="https://app.navigator.exchange/#/analytics/contest"
               className="link-underline"
               target="_blank"
               rel="noopener noreferrer"
             >
               Details
-            </a>
+            </NavLink>
           </span>
           <span className="cup">🏆</span>
         </div>
